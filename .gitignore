@@ -1,0 +1,7 @@
+#为注释
+#*.txt        #忽略所有 .txt结尾的文件,这样的话上传就不会被选中！
+#!lib.txt     #但lib.txt除外
+.idea/
+target/
+*.iml
+
