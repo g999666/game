@@ -17,5 +17,6 @@
      </bean>
     <!--两个标准配置-->
     <mvc:default-servlet-handler/>
-    <mvc:annotation-driven />
+    <mvc:annotation-driven/>
+
 </beans>

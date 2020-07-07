@@ -1,7 +1,5 @@
 package org.game.bean;
 
-import java.util.Date;
-
 public class Game {
     private Integer id;
 
@@ -11,12 +9,20 @@ public class Game {
 
     private Integer gameUrl;
 
-    private Date lastTopic;
-
-    private Date lastPostedtopic;
-    private Ranking ranking;
+    private Integer lastTopic;
     private GameType gameType;
     private GameUrl gameU;
+    private Topic topic;
+    private User user;
+    private Ranking ranking;
+
+    public GameType getGameType() {
+        return gameType;
+    }
+
+    public void setGameType(GameType gameType) {
+        this.gameType = gameType;
+    }
 
     public GameUrl getGameU() {
         return gameU;
@@ -26,12 +32,20 @@ public class Game {
         this.gameU = gameU;
     }
 
-    public GameType getGameType() {
-        return gameType;
+    public Topic getTopic() {
+        return topic;
     }
 
-    public void setGameType(GameType gameType) {
-        this.gameType = gameType;
+    public void setTopic(Topic topic) {
+        this.topic = topic;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Ranking getRanking() {
@@ -74,19 +88,11 @@ public class Game {
         this.gameUrl = gameUrl;
     }
 
-    public Date getLastTopic() {
+    public Integer getLastTopic() {
         return lastTopic;
     }
 
-    public void setLastTopic(Date lastTopic) {
+    public void setLastTopic(Integer lastTopic) {
         this.lastTopic = lastTopic;
-    }
-
-    public Date getLastPostedtopic() {
-        return lastPostedtopic;
-    }
-
-    public void setLastPostedtopic(Date lastPostedtopic) {
-        this.lastPostedtopic = lastPostedtopic;
     }
 }
