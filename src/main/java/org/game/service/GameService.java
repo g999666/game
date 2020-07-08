@@ -28,24 +28,30 @@ public class GameService {
     @Autowired
     TopicMapper topicMapper;
 
+    /**
+     * 根据类型名字，和排行数查询
+     * @param rankName  类型名字
+     * @param num   指定查几个，0为查所有
+     * @return 游戏集合
+     */
     public List<Game> selectGameByRank(String rankName, Integer num){
         List<Game>  games = gameMapper.selectGameByRankName(rankName,num);
-        System.out.println(rankName+","+num+","+games.size());
         return games;
     }
 
     /**
      * 需要查是在首页的所有类型名字，名字放arraylist
      * 循环去数据库查改类型的数据列表
-     * @return
+     * @return Map<游戏类型名,游戏集合>
      */
     public Map<String,Object> selectHomeGameLists(){
         Map<String,Object> HomeGames=new HashMap<>();
         ArrayList<String> typeNames=gameTypeMapper.getTypeNames();
-        List<Game> gameList = new ArrayList<>();
+        List<Game> gameList = null ;
         for (String typeName : typeNames) {
+            gameList=new ArrayList<>();
             //循环去数据库查改类型的数据列表
-            List<Game> games = gameMapper.selectGameByRankName(typeName, 0);
+            List<Game> games = gameMapper.selectGameByRankName(typeName, 3);
             for (Game game : games) {
                 // 根据游戏查评论数
                 int i = topicMapper.topicCountByGameId(game.getId());
@@ -56,4 +62,6 @@ public class GameService {
         }
         return HomeGames;
     }
+
+
 }

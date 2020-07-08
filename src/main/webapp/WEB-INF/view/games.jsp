@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="CN">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <head>
 <title>Games</title>
 <link href="${APP_PATH}/statics/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -30,84 +31,107 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--content-->
 	<div class="container">
 			<div class="games">
-				<h2> 所有游戏</h2>
+				<h2>${key}</h2>
 			<div class="wrap">	
 			<div class="main">
 				<ul id="og-grid" class="og-grid">
-					<li>
-						<a href="#" data-largesrc="${APP_PATH}/statics/images/1.jpg" data-title="Subway Surfers" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
-							<img class="img-responsive" src="${APP_PATH}/statics/images/thumbs/1.jpg" alt="img01"/>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-largesrc="${APP_PATH}/statics/images/2.jpg" data-title="Angry Birds" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
-							<img class="img-responsive" src="${APP_PATH}/statics/images/thumbs/2.jpg" alt="img02"/>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-largesrc="${APP_PATH}/statics/images/3.jpg" data-title="Bike Games"  data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
-							<img class="img-responsive" src="${APP_PATH}/statics/images/thumbs/3.jpg" alt="img03"/>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-largesrc="${APP_PATH}/statics/images/4.jpg" data-title="Temple Run"  data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
-							<img class="img-responsive" src="${APP_PATH}/statics/images/thumbs/4.jpg" alt="img01"/>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-largesrc="${APP_PATH}/statics/images/5.jpg" data-title="Car Games"  data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
-							<img class="img-responsive" src="${APP_PATH}/statics/images/thumbs/5.jpg" alt="img01"/>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-largesrc="${APP_PATH}/statics/images/6.jpg" data-title="Fite Games"  data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
-							<img class="img-responsive" src="${APP_PATH}/statics/images/thumbs/6.jpg" alt="img02"/>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-largesrc="${APP_PATH}/statics/images/7.jpg" data-title="Fite Games"  data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
-							<img class="img-responsive" src="${APP_PATH}/statics/images/thumbs/7.jpg" alt="img03"/>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-largesrc="${APP_PATH}/statics/images/8.jpg" data-title="Panda Game" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
-							<img class="img-responsive" src="${APP_PATH}/statics/images/thumbs/8.jpg" alt="img01"/>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-largesrc="${APP_PATH}/statics/images/4.jpg" data-title="Temple Run"  data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
-							<img class="img-responsive" src="${APP_PATH}/statics/images/thumbs/4.jpg" alt="img01"/>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-largesrc="${APP_PATH}/statics/images/3.jpg" data-title="Bike Games"  data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
-							<img class="img-responsive" src="${APP_PATH}/statics/images/thumbs/3.jpg" alt="img03"/>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-largesrc="${APP_PATH}/statics/images/5.jpg" data-title="Car Games"  data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
-							<img class="img-responsive" src="${APP_PATH}/statics/images/thumbs/5.jpg" alt="img01"/>
-						</a>
-					</li>
-					<li>
-						<a href="#" data-largesrc="${APP_PATH}/statics/images/1.jpg" data-title="Subway Surfers" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
-							<img class="img-responsive" src="${APP_PATH}/statics/images/thumbs/1.jpg" alt="img01"/>
-						</a>
-					</li>
-					 <div class="clearfix"> </div>
 					</ul>
 				</div>
 			</div>
 		</div>
-<script src="${APP_PATH}/statics/js/grid.js"></script>
-		<script>
-			$(function() {
-				Grid.init();
-			});
-		</script>
 	</div>
-	<!---->
+<nav id="page_nav_area">
+<%--	<ul class="pagination">
+		<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+		<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+		<li><a href="#">2 <span class="sr-only"></span></a></li>
+		<li><a href="#">3 <span class="sr-only"></span></a></li>
+		<li><a href="#">4 <span class="sr-only"></span></a></li>
+		<li><a href="#">5 <span class="sr-only"></span></a></li>
+		<li> <a href="#" aria-label="Next"><span aria-hidden="true">»</span> </a> </li>
+	</ul>--%>
+</nav>
 <%@include file="footer.jsp"%>
-
+<script src="${APP_PATH}/statics/js/grid.js"></script>
+<script>
+	$(function() {
+		to_page(1);
+		function to_page(pageNum) {
+			$.ajax({
+				"url":"/game/"+$("h2").text()+"/"+pageNum,
+				"type": "get",
+				"success": function (result) {
+					console.log(result);
+					build_content(result);
+					build_pageField(result);
+				},
+				"error": function () {
+					alert("error");
+				}
+			});
+			function build_content(result) {
+				$(".main").empty();
+				Grid.init();
+				var items = result.extend.page.list;
+				$.each(items, function (index, item) {
+					var ull=$("<div></div>").attr("id","og-grid").addClass("og-grid");
+					var lil = $("<li></li>");
+					var al = $("<a></a>").attr("href", "#").attr("data-largesrc", "/statics/images/thumbs/thumb1/" + item.gameU.pic).attr("data-title", item.gameName).attr("data-description", item.gameDesc);
+					var il = $("<img/>").addClass("img-responsive").attr("src", "/statics/images/thumbs/thumb2/" + item.gameU.pic).attr("alt", "img" + index);
+					ull= ull.append(lil);
+					ull.appendTo(".main");
+					lil = lil.append(al.append(il)).appendTo('#og-grid');
+					Grid.addItems(lil);
+				})
+				var cli = $("<div></div>").addClass("clearfix");
+				cli.appendTo('#og-grid');
+			}
+			function build_pageField(result) {
+				$("#page_nav_area").empty();
+				var ul=$("<ul></ul>").addClass("pagination");
+				var firstPageli=$("<li></li>").append($("<a></a>").append("首页").attr("href","#"));
+				var prePageLi=$("<li></li>").append($("<a></a>").append("&laquo;"));
+				if (result.extend.page.hasPreviousPage==false){
+					firstPageli.addClass("disabled");
+					prePageLi.addClass("disabled");
+				}else {
+					firstPageli.click(function () {
+						to_page(1)
+					});
+					prePageLi.click(function () {
+						to_page(result.extend.page.pageNum-1);
+					})
+				}
+				var lastPageLi=$("<li></li>").append($("<a></a>").append("末页").attr("href","#"));
+				var nextPageLi=$("<li></li>").append($("<a></a>").append("&raquo;"));
+				if (result.extend.page.hasNextPage==false){
+					nextPageLi.addClass("disabled");
+					lastPageLi.addClass("disabled");
+				}else {
+					lastPageLi.click(function () {
+						to_page(result.extend.page.pages);
+					});
+					nextPageLi.click(function () {
+						to_page(result.extend.page.pageNum+1);
+					})
+				}
+				ul.append(firstPageli).append(prePageLi);
+				$.each(result.extend.page.navigatepageNums,function (index,item) {
+					var numLi=$("<li></li>").append($("<a></a>").append(item));
+					if (result.extend.page.pageNum==item){
+						numLi.addClass("active");
+					}
+					numLi.click(function () {
+						to_page(item);
+					})
+					ul.append(numLi);
+					ul.append(nextPageLi).append(lastPageLi);
+					var navEle=$("<nav></nav>").append(ul);
+					navEle.appendTo("#page_nav_area");
+				})
+			}
+		}
+	});
+</script>
 </body>
 </html>

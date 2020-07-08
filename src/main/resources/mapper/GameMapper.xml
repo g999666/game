@@ -120,8 +120,13 @@ FROM
 	topic
 	ON
 		game.last_topic = topic.id
+		<if test="rank != 'all'">
+
 		where
                     gametype.type_name = #{rank,jdbcType=VARCHAR}
+                    </if>
+                    GROUP BY
+	game.id
                     ORDER BY
 	game_type.rank ASC
         <if test="num!=0">

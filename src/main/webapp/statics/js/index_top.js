@@ -54,7 +54,7 @@ $(document).ready(function () {
             var maps = result.extend.homeGames;
             $.each(maps,function (key,values) {
                     var $gameType=$("<div></div>").addClass("col-md-4 latest");
-                    var $teitle=$("<h4></h4>").append(key).appendTo($gameType);
+                    var $teitle=$("<h4></h4>").append("<a href=games/"+key+">"+key+"</a>").appendTo($gameType);
                     $.each(values,function (index,item) {
                         var $game = $("<div></div>").addClass("late");
                             var $img=$("<img/>").addClass("img-responsive ").attr("src","/statics/images/low/" + item.gameU.pic);
@@ -64,7 +64,6 @@ $(document).ready(function () {
                         $game.append($al).append($grid).append($clearfix).appendTo($gameType);
                     } )
                 $gameType.appendTo("#gameTypes");
-                $("#gameTypes").append("<div></div>").addClass("clearfix");
             })
         },
         "error": function () {

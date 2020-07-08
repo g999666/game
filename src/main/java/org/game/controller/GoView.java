@@ -1,7 +1,10 @@
 package org.game.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @program: game
@@ -11,8 +14,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
  **/
 @Controller
 public class GoView {
-    @RequestMapping("/games")
-    public String goGames(){
+    @RequestMapping("/games/{key}")
+    public String goGames(@PathVariable("key") String key, HttpServletRequest request) {
+        request.setAttribute("key", key);
         return "games";
     }
     @RequestMapping("/contact")
