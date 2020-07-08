@@ -16,20 +16,20 @@ public class Game {
     private User user;
     private Ranking ranking;
 
-    public GameType getGameType() {
-        return gameType;
-    }
-
-    public void setGameType(GameType gameType) {
-        this.gameType = gameType;
-    }
-
     public GameUrl getGameU() {
         return gameU;
     }
 
     public void setGameU(GameUrl gameU) {
         this.gameU = gameU;
+    }
+
+    public GameType getGameType() {
+        return gameType;
+    }
+
+    public void setGameType(GameType gameType) {
+        this.gameType = gameType;
     }
 
     public Topic getTopic() {

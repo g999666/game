@@ -30,4 +30,6 @@ public interface TopicMapper {
     int updateByPrimaryKey(Topic record);
 
     int topicCountByGameId(int id);
+
+
 }

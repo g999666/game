@@ -131,7 +131,7 @@ CREATE TABLE `topic` (
   `game_id` int(11) NOT NULL COMMENT '评论在哪个游戏下面，如果为0那就是用户反馈的信息',
   `content` varchar(255) NOT NULL COMMENT '具体评论',
   `from_uid` int(11) NOT NULL COMMENT '评论用户id',
-  `parent_id` int(11) NOT NULL COMMENT '父评论的id',
+  `parent_id` int(11) NOT NULL COMMENT '父评论的id,如果父评论是0那就是公告',
   `good` int(11) NOT NULL DEFAULT '0' COMMENT '点赞',
   `low` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '踩',
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
@@ -141,13 +141,14 @@ CREATE TABLE `topic` (
   KEY `fk_fg` (`game_id`),
   CONSTRAINT `fk_fg` FOREIGN KEY (`game_id`) REFERENCES `game` (`id`),
   CONSTRAINT `fk_fu` FOREIGN KEY (`from_uid`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 /*Data for the table `topic` */
 
 insert  into `topic`(`id`,`game_id`,`content`,`from_uid`,`parent_id`,`good`,`low`,`create_time`,`modify_time`) values 
 (1,1,'摸鱼',1,0,0,0,'2020-07-07 16:21:58',NULL),
-(2,1,'摸鱼1',1,0,0,0,'2020-07-07 16:21:58',NULL);
+(2,1,'摸鱼1',1,0,0,0,'2020-07-07 16:21:50',NULL),
+(3,2,'摸鱼2',1,0,0,0,'2020-07-07 16:21:11',NULL);
 
 /*Table structure for table `user` */
 
@@ -158,7 +159,6 @@ CREATE TABLE `user` (
   `user_name` varchar(20) NOT NULL COMMENT '用户名字',
   `user_password` varchar(255) NOT NULL COMMENT '密码',
   `user_email` varchar(255) NOT NULL COMMENT '邮箱',
-  `user_head` varchar(255) NOT NULL COMMENT '用户头像',
   `identity_id` int(11) NOT NULL COMMENT '身份',
   `head_pic` varchar(255) DEFAULT NULL COMMENT '头像',
   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -170,8 +170,8 @@ CREATE TABLE `user` (
 
 /*Data for the table `user` */
 
-insert  into `user`(`user_id`,`user_name`,`user_password`,`user_email`,`user_head`,`identity_id`,`head_pic`,`create_time`,`modify_time`) values 
-(1,'郭浩驰','123456','3286739215@qq.com','null',1,NULL,'2020-07-05 00:12:51',NULL);
+insert  into `user`(`user_id`,`user_name`,`user_password`,`user_email`,`identity_id`,`head_pic`,`create_time`,`modify_time`) values 
+(1,'郭浩驰','123456','3286739215@qq.com',1,NULL,'2020-07-05 00:12:51',NULL);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

@@ -178,8 +178,7 @@
       topFlag = #{topflag,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
-
-               <select id="getTypeNames" resultType="java.lang.String">
+  <select id="getTypeNames" resultType="java.lang.String">
   select gametype.type_name
 from gametype
 where gametype.topFlag=1

@@ -1,5 +1,6 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html>
+<html lang="CN">
 <head>
 <title>404</title>
 <link href="${APP_PATH}/statics/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />

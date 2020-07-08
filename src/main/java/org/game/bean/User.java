@@ -1,9 +1,5 @@
 package org.game.bean;
 
-import com.fasterxml.jackson.annotation.JsonFilter;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import org.springframework.format.annotation.DateTimeFormat;
-
 import java.util.Date;
 
 public class User {
@@ -14,8 +10,6 @@ public class User {
     private String userPassword;
 
     private String userEmail;
-
-    private String userHead;
 
     private Integer identityId;
 
@@ -55,14 +49,6 @@ public class User {
 
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail == null ? null : userEmail.trim();
-    }
-
-    public String getUserHead() {
-        return userHead;
-    }
-
-    public void setUserHead(String userHead) {
-        this.userHead = userHead == null ? null : userHead.trim();
     }
 
     public Integer getIdentityId() {

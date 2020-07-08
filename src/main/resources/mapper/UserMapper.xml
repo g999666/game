@@ -6,7 +6,6 @@
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
     <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
     <result column="user_email" jdbcType="VARCHAR" property="userEmail" />
-    <result column="user_head" jdbcType="VARCHAR" property="userHead" />
     <result column="identity_id" jdbcType="INTEGER" property="identityId" />
     <result column="head_pic" jdbcType="VARCHAR" property="headPic" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
@@ -71,8 +70,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    user_id, user_name, user_password, user_email, user_head, identity_id, head_pic, 
-    create_time, modify_time
+    user_id, user_name, user_password, user_email, identity_id, head_pic, create_time, 
+    modify_time
   </sql>
   <select id="selectByExample" parameterType="org.game.bean.UserExample" resultMap="BaseResultMap">
     select
@@ -106,13 +105,11 @@
   </delete>
   <insert id="insert" parameterType="org.game.bean.User">
     insert into user (user_id, user_name, user_password, 
-      user_email, user_head, identity_id, 
-      head_pic, create_time, modify_time
-      )
+      user_email, identity_id, head_pic, 
+      create_time, modify_time)
     values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userPassword,jdbcType=VARCHAR}, 
-      #{userEmail,jdbcType=VARCHAR}, #{userHead,jdbcType=VARCHAR}, #{identityId,jdbcType=INTEGER}, 
-      #{headPic,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}
-      )
+      #{userEmail,jdbcType=VARCHAR}, #{identityId,jdbcType=INTEGER}, #{headPic,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="org.game.bean.User">
     insert into user
@@ -128,9 +125,6 @@
       </if>
       <if test="userEmail != null">
         user_email,
-      </if>
-      <if test="userHead != null">
-        user_head,
       </if>
       <if test="identityId != null">
         identity_id,
@@ -157,9 +151,6 @@
       </if>
       <if test="userEmail != null">
         #{userEmail,jdbcType=VARCHAR},
-      </if>
-      <if test="userHead != null">
-        #{userHead,jdbcType=VARCHAR},
       </if>
       <if test="identityId != null">
         #{identityId,jdbcType=INTEGER},
@@ -196,9 +187,6 @@
       <if test="record.userEmail != null">
         user_email = #{record.userEmail,jdbcType=VARCHAR},
       </if>
-      <if test="record.userHead != null">
-        user_head = #{record.userHead,jdbcType=VARCHAR},
-      </if>
       <if test="record.identityId != null">
         identity_id = #{record.identityId,jdbcType=INTEGER},
       </if>
@@ -222,7 +210,6 @@
       user_name = #{record.userName,jdbcType=VARCHAR},
       user_password = #{record.userPassword,jdbcType=VARCHAR},
       user_email = #{record.userEmail,jdbcType=VARCHAR},
-      user_head = #{record.userHead,jdbcType=VARCHAR},
       identity_id = #{record.identityId,jdbcType=INTEGER},
       head_pic = #{record.headPic,jdbcType=VARCHAR},
       create_time = #{record.createTime,jdbcType=TIMESTAMP},
@@ -242,9 +229,6 @@
       </if>
       <if test="userEmail != null">
         user_email = #{userEmail,jdbcType=VARCHAR},
-      </if>
-      <if test="userHead != null">
-        user_head = #{userHead,jdbcType=VARCHAR},
       </if>
       <if test="identityId != null">
         identity_id = #{identityId,jdbcType=INTEGER},
@@ -266,7 +250,6 @@
     set user_name = #{userName,jdbcType=VARCHAR},
       user_password = #{userPassword,jdbcType=VARCHAR},
       user_email = #{userEmail,jdbcType=VARCHAR},
-      user_head = #{userHead,jdbcType=VARCHAR},
       identity_id = #{identityId,jdbcType=INTEGER},
       head_pic = #{headPic,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},
