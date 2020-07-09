@@ -1,16 +1,4 @@
-$(document).ready(function () {
-    $("#reviews_Click").click(function () {
-       alert("弹出来");
-    })
 
-    //鼠标移进去
-
-
-
-
-
-
-})
 
 function videoPlayback() {
     //获取视频标签
