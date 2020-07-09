@@ -52,6 +52,7 @@
                         <li><a class="color4" href="/404">新闻</a></li>
                         <li><a class="color5" href="/blog">论坛</a></li>
                         <li><a class="color6" href="/contact">反馈</a></li>
+
                         <div class="clearfix"></div>
                     </ul>
 
