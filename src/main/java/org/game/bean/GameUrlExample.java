@@ -304,563 +304,73 @@ public class GameUrlExample {
             return (Criteria) this;
         }
 
-        public Criteria andLittlePicIsNull() {
-            addCriterion("little_pic is null");
+        public Criteria andPicIsNull() {
+            addCriterion("pic is null");
             return (Criteria) this;
         }
 
-        public Criteria andLittlePicIsNotNull() {
-            addCriterion("little_pic is not null");
+        public Criteria andPicIsNotNull() {
+            addCriterion("pic is not null");
             return (Criteria) this;
         }
 
-        public Criteria andLittlePicEqualTo(String value) {
-            addCriterion("little_pic =", value, "littlePic");
+        public Criteria andPicEqualTo(String value) {
+            addCriterion("pic =", value, "pic");
             return (Criteria) this;
         }
 
-        public Criteria andLittlePicNotEqualTo(String value) {
-            addCriterion("little_pic <>", value, "littlePic");
+        public Criteria andPicNotEqualTo(String value) {
+            addCriterion("pic <>", value, "pic");
             return (Criteria) this;
         }
 
-        public Criteria andLittlePicGreaterThan(String value) {
-            addCriterion("little_pic >", value, "littlePic");
+        public Criteria andPicGreaterThan(String value) {
+            addCriterion("pic >", value, "pic");
             return (Criteria) this;
         }
 
-        public Criteria andLittlePicGreaterThanOrEqualTo(String value) {
-            addCriterion("little_pic >=", value, "littlePic");
+        public Criteria andPicGreaterThanOrEqualTo(String value) {
+            addCriterion("pic >=", value, "pic");
             return (Criteria) this;
         }
 
-        public Criteria andLittlePicLessThan(String value) {
-            addCriterion("little_pic <", value, "littlePic");
+        public Criteria andPicLessThan(String value) {
+            addCriterion("pic <", value, "pic");
             return (Criteria) this;
         }
 
-        public Criteria andLittlePicLessThanOrEqualTo(String value) {
-            addCriterion("little_pic <=", value, "littlePic");
+        public Criteria andPicLessThanOrEqualTo(String value) {
+            addCriterion("pic <=", value, "pic");
             return (Criteria) this;
         }
 
-        public Criteria andLittlePicLike(String value) {
-            addCriterion("little_pic like", value, "littlePic");
+        public Criteria andPicLike(String value) {
+            addCriterion("pic like", value, "pic");
             return (Criteria) this;
         }
 
-        public Criteria andLittlePicNotLike(String value) {
-            addCriterion("little_pic not like", value, "littlePic");
+        public Criteria andPicNotLike(String value) {
+            addCriterion("pic not like", value, "pic");
             return (Criteria) this;
         }
 
-        public Criteria andLittlePicIn(List<String> values) {
-            addCriterion("little_pic in", values, "littlePic");
+        public Criteria andPicIn(List<String> values) {
+            addCriterion("pic in", values, "pic");
             return (Criteria) this;
         }
 
-        public Criteria andLittlePicNotIn(List<String> values) {
-            addCriterion("little_pic not in", values, "littlePic");
+        public Criteria andPicNotIn(List<String> values) {
+            addCriterion("pic not in", values, "pic");
             return (Criteria) this;
         }
 
-        public Criteria andLittlePicBetween(String value1, String value2) {
-            addCriterion("little_pic between", value1, value2, "littlePic");
+        public Criteria andPicBetween(String value1, String value2) {
+            addCriterion("pic between", value1, value2, "pic");
             return (Criteria) this;
         }
 
-        public Criteria andLittlePicNotBetween(String value1, String value2) {
-            addCriterion("little_pic not between", value1, value2, "littlePic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBigPicIsNull() {
-            addCriterion("big_pic is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andBigPicIsNotNull() {
-            addCriterion("big_pic is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andBigPicEqualTo(String value) {
-            addCriterion("big_pic =", value, "bigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBigPicNotEqualTo(String value) {
-            addCriterion("big_pic <>", value, "bigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBigPicGreaterThan(String value) {
-            addCriterion("big_pic >", value, "bigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBigPicGreaterThanOrEqualTo(String value) {
-            addCriterion("big_pic >=", value, "bigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBigPicLessThan(String value) {
-            addCriterion("big_pic <", value, "bigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBigPicLessThanOrEqualTo(String value) {
-            addCriterion("big_pic <=", value, "bigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBigPicLike(String value) {
-            addCriterion("big_pic like", value, "bigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBigPicNotLike(String value) {
-            addCriterion("big_pic not like", value, "bigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBigPicIn(List<String> values) {
-            addCriterion("big_pic in", values, "bigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBigPicNotIn(List<String> values) {
-            addCriterion("big_pic not in", values, "bigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBigPicBetween(String value1, String value2) {
-            addCriterion("big_pic between", value1, value2, "bigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBigPicNotBetween(String value1, String value2) {
-            addCriterion("big_pic not between", value1, value2, "bigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewLittlePicIsNull() {
-            addCriterion("new_little_pic is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewLittlePicIsNotNull() {
-            addCriterion("new_little_pic is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewLittlePicEqualTo(String value) {
-            addCriterion("new_little_pic =", value, "newLittlePic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewLittlePicNotEqualTo(String value) {
-            addCriterion("new_little_pic <>", value, "newLittlePic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewLittlePicGreaterThan(String value) {
-            addCriterion("new_little_pic >", value, "newLittlePic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewLittlePicGreaterThanOrEqualTo(String value) {
-            addCriterion("new_little_pic >=", value, "newLittlePic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewLittlePicLessThan(String value) {
-            addCriterion("new_little_pic <", value, "newLittlePic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewLittlePicLessThanOrEqualTo(String value) {
-            addCriterion("new_little_pic <=", value, "newLittlePic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewLittlePicLike(String value) {
-            addCriterion("new_little_pic like", value, "newLittlePic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewLittlePicNotLike(String value) {
-            addCriterion("new_little_pic not like", value, "newLittlePic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewLittlePicIn(List<String> values) {
-            addCriterion("new_little_pic in", values, "newLittlePic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewLittlePicNotIn(List<String> values) {
-            addCriterion("new_little_pic not in", values, "newLittlePic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewLittlePicBetween(String value1, String value2) {
-            addCriterion("new_little_pic between", value1, value2, "newLittlePic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewLittlePicNotBetween(String value1, String value2) {
-            addCriterion("new_little_pic not between", value1, value2, "newLittlePic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewBigPicIsNull() {
-            addCriterion("new_big_pic is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewBigPicIsNotNull() {
-            addCriterion("new_big_pic is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewBigPicEqualTo(String value) {
-            addCriterion("new_big_pic =", value, "newBigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewBigPicNotEqualTo(String value) {
-            addCriterion("new_big_pic <>", value, "newBigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewBigPicGreaterThan(String value) {
-            addCriterion("new_big_pic >", value, "newBigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewBigPicGreaterThanOrEqualTo(String value) {
-            addCriterion("new_big_pic >=", value, "newBigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewBigPicLessThan(String value) {
-            addCriterion("new_big_pic <", value, "newBigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewBigPicLessThanOrEqualTo(String value) {
-            addCriterion("new_big_pic <=", value, "newBigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewBigPicLike(String value) {
-            addCriterion("new_big_pic like", value, "newBigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewBigPicNotLike(String value) {
-            addCriterion("new_big_pic not like", value, "newBigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewBigPicIn(List<String> values) {
-            addCriterion("new_big_pic in", values, "newBigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewBigPicNotIn(List<String> values) {
-            addCriterion("new_big_pic not in", values, "newBigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewBigPicBetween(String value1, String value2) {
-            addCriterion("new_big_pic between", value1, value2, "newBigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andNewBigPicNotBetween(String value1, String value2) {
-            addCriterion("new_big_pic not between", value1, value2, "newBigPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andPosterIsNull() {
-            addCriterion("poster is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andPosterIsNotNull() {
-            addCriterion("poster is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andPosterEqualTo(String value) {
-            addCriterion("poster =", value, "poster");
-            return (Criteria) this;
-        }
-
-        public Criteria andPosterNotEqualTo(String value) {
-            addCriterion("poster <>", value, "poster");
-            return (Criteria) this;
-        }
-
-        public Criteria andPosterGreaterThan(String value) {
-            addCriterion("poster >", value, "poster");
-            return (Criteria) this;
-        }
-
-        public Criteria andPosterGreaterThanOrEqualTo(String value) {
-            addCriterion("poster >=", value, "poster");
-            return (Criteria) this;
-        }
-
-        public Criteria andPosterLessThan(String value) {
-            addCriterion("poster <", value, "poster");
-            return (Criteria) this;
-        }
-
-        public Criteria andPosterLessThanOrEqualTo(String value) {
-            addCriterion("poster <=", value, "poster");
-            return (Criteria) this;
-        }
-
-        public Criteria andPosterLike(String value) {
-            addCriterion("poster like", value, "poster");
-            return (Criteria) this;
-        }
-
-        public Criteria andPosterNotLike(String value) {
-            addCriterion("poster not like", value, "poster");
-            return (Criteria) this;
-        }
-
-        public Criteria andPosterIn(List<String> values) {
-            addCriterion("poster in", values, "poster");
-            return (Criteria) this;
-        }
-
-        public Criteria andPosterNotIn(List<String> values) {
-            addCriterion("poster not in", values, "poster");
-            return (Criteria) this;
-        }
-
-        public Criteria andPosterBetween(String value1, String value2) {
-            addCriterion("poster between", value1, value2, "poster");
-            return (Criteria) this;
-        }
-
-        public Criteria andPosterNotBetween(String value1, String value2) {
-            addCriterion("poster not between", value1, value2, "poster");
-            return (Criteria) this;
-        }
-
-        public Criteria andLowPicIsNull() {
-            addCriterion("low_pic is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andLowPicIsNotNull() {
-            addCriterion("low_pic is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andLowPicEqualTo(String value) {
-            addCriterion("low_pic =", value, "lowPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLowPicNotEqualTo(String value) {
-            addCriterion("low_pic <>", value, "lowPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLowPicGreaterThan(String value) {
-            addCriterion("low_pic >", value, "lowPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLowPicGreaterThanOrEqualTo(String value) {
-            addCriterion("low_pic >=", value, "lowPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLowPicLessThan(String value) {
-            addCriterion("low_pic <", value, "lowPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLowPicLessThanOrEqualTo(String value) {
-            addCriterion("low_pic <=", value, "lowPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLowPicLike(String value) {
-            addCriterion("low_pic like", value, "lowPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLowPicNotLike(String value) {
-            addCriterion("low_pic not like", value, "lowPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLowPicIn(List<String> values) {
-            addCriterion("low_pic in", values, "lowPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLowPicNotIn(List<String> values) {
-            addCriterion("low_pic not in", values, "lowPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLowPicBetween(String value1, String value2) {
-            addCriterion("low_pic between", value1, value2, "lowPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLowPicNotBetween(String value1, String value2) {
-            addCriterion("low_pic not between", value1, value2, "lowPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBlogPicIsNull() {
-            addCriterion("blog_pic is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andBlogPicIsNotNull() {
-            addCriterion("blog_pic is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andBlogPicEqualTo(String value) {
-            addCriterion("blog_pic =", value, "blogPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBlogPicNotEqualTo(String value) {
-            addCriterion("blog_pic <>", value, "blogPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBlogPicGreaterThan(String value) {
-            addCriterion("blog_pic >", value, "blogPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBlogPicGreaterThanOrEqualTo(String value) {
-            addCriterion("blog_pic >=", value, "blogPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBlogPicLessThan(String value) {
-            addCriterion("blog_pic <", value, "blogPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBlogPicLessThanOrEqualTo(String value) {
-            addCriterion("blog_pic <=", value, "blogPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBlogPicLike(String value) {
-            addCriterion("blog_pic like", value, "blogPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBlogPicNotLike(String value) {
-            addCriterion("blog_pic not like", value, "blogPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBlogPicIn(List<String> values) {
-            addCriterion("blog_pic in", values, "blogPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBlogPicNotIn(List<String> values) {
-            addCriterion("blog_pic not in", values, "blogPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBlogPicBetween(String value1, String value2) {
-            addCriterion("blog_pic between", value1, value2, "blogPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andBlogPicNotBetween(String value1, String value2) {
-            addCriterion("blog_pic not between", value1, value2, "blogPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andCommonPicIsNull() {
-            addCriterion("common_pic is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andCommonPicIsNotNull() {
-            addCriterion("common_pic is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andCommonPicEqualTo(String value) {
-            addCriterion("common_pic =", value, "commonPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andCommonPicNotEqualTo(String value) {
-            addCriterion("common_pic <>", value, "commonPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andCommonPicGreaterThan(String value) {
-            addCriterion("common_pic >", value, "commonPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andCommonPicGreaterThanOrEqualTo(String value) {
-            addCriterion("common_pic >=", value, "commonPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andCommonPicLessThan(String value) {
-            addCriterion("common_pic <", value, "commonPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andCommonPicLessThanOrEqualTo(String value) {
-            addCriterion("common_pic <=", value, "commonPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andCommonPicLike(String value) {
-            addCriterion("common_pic like", value, "commonPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andCommonPicNotLike(String value) {
-            addCriterion("common_pic not like", value, "commonPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andCommonPicIn(List<String> values) {
-            addCriterion("common_pic in", values, "commonPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andCommonPicNotIn(List<String> values) {
-            addCriterion("common_pic not in", values, "commonPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andCommonPicBetween(String value1, String value2) {
-            addCriterion("common_pic between", value1, value2, "commonPic");
-            return (Criteria) this;
-        }
-
-        public Criteria andCommonPicNotBetween(String value1, String value2) {
-            addCriterion("common_pic not between", value1, value2, "commonPic");
+        public Criteria andPicNotBetween(String value1, String value2) {
+            addCriterion("pic not between", value1, value2, "pic");
             return (Criteria) this;
         }
     }

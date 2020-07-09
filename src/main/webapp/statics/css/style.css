@@ -215,7 +215,7 @@ h2.new{
 
 /*--col-mn--*/
 .col-mn{
-	background:url(../images/poster/ba2.jpg)no-repeat center;
+/*	background:url(../images/poster/la4.jpg)no-repeat center;*/
 	width:100%;
 	min-height:380px;
 	display:block;
@@ -507,7 +507,7 @@ font-family: 'Montserrat Alternates', sans-serif;
 .top-blog {
 	float: left;
 	margin: 0.5em 0em 0em 2em;
-	width: 90%;
+	width: 70%;
 }
 .blog-left b{
 	font-size:3.5em;

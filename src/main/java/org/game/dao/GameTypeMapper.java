@@ -1,5 +1,6 @@
 package org.game.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import org.game.bean.GameType;
@@ -27,4 +28,5 @@ public interface GameTypeMapper {
     int updateByPrimaryKeySelective(GameType record);
 
     int updateByPrimaryKey(GameType record);
+    ArrayList<String> getTypeNames();
 }

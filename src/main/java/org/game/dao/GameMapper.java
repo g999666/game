@@ -1,5 +1,6 @@
 package org.game.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 import org.game.bean.Game;
@@ -27,6 +28,6 @@ public interface GameMapper {
     int updateByPrimaryKeySelective(Game record);
 
     int updateByPrimaryKey(Game record);
-
-    List<Game> selectGameByRankName(@Param("rank") String rank,@Param("num") Integer num);
+    ArrayList<Game> selectGameByRankName(@Param("rank") String rank, @Param("num") Integer num);
+    ArrayList<Game> selectGameByTime();
 }

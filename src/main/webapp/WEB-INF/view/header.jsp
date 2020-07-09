@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%pageContext.getRequest().setAttribute("APP_PATH", request.getContextPath());%>
 <html>
 <head>
     <title>Title</title>
@@ -45,12 +46,12 @@
                     <span class="menu"><img src="${APP_PATH}/statics/images/menu.png" alt=""> </span>
 
                     <ul>
-                        <li class="active"><a class="color1" href="index.jsp">主页</a></li>
-                        <li><a class="color2" href="/games"  >游戏</a></li>
-                        <li><a class="color3" href="/reviews"  >评论</a></li>
-                        <li><a class="color4" href="/404" >新闻</a></li>
-                        <li><a class="color5" href="/blog"  >论坛</a></li>
-                        <li><a class="color6" href="/contact" >反馈</a></li>
+                        <li class="active"><a class="color1" href="${APP_PATH}/index.jsp">主页</a></li>
+                        <li><a class="color2" href="/games/all">游戏</a></li>
+                        <li><a class="color3" href="/reviews">评论</a></li>
+                        <li><a class="color4" href="/404">新闻</a></li>
+                        <li><a class="color5" href="/blog">论坛</a></li>
+                        <li><a class="color6" href="/contact">反馈</a></li>
                         <div class="clearfix"></div>
                     </ul>
 

@@ -5,6 +5,8 @@ public class GameType {
 
     private String typeName;
 
+    private Integer topflag;
+
     public Integer getId() {
         return id;
     }
@@ -19,5 +21,13 @@ public class GameType {
 
     public void setTypeName(String typeName) {
         this.typeName = typeName == null ? null : typeName.trim();
+    }
+
+    public Integer getTopflag() {
+        return topflag;
+    }
+
+    public void setTopflag(Integer topflag) {
+        this.topflag = topflag;
     }
 }

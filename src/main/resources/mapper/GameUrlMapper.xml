@@ -5,14 +5,7 @@
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="downLoad_url" jdbcType="VARCHAR" property="downloadUrl" />
     <result column="official_url" jdbcType="VARCHAR" property="officialUrl" />
-    <result column="little_pic" jdbcType="VARCHAR" property="littlePic" />
-    <result column="big_pic" jdbcType="VARCHAR" property="bigPic" />
-    <result column="new_little_pic" jdbcType="VARCHAR" property="newLittlePic" />
-    <result column="new_big_pic" jdbcType="VARCHAR" property="newBigPic" />
-    <result column="poster" jdbcType="VARCHAR" property="poster" />
-    <result column="low_pic" jdbcType="VARCHAR" property="lowPic" />
-    <result column="blog_pic" jdbcType="VARCHAR" property="blogPic" />
-    <result column="common_pic" jdbcType="VARCHAR" property="commonPic" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -73,8 +66,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, downLoad_url, official_url, little_pic, big_pic, new_little_pic, new_big_pic, 
-    poster, low_pic, blog_pic, common_pic
+    id, downLoad_url, official_url, pic
   </sql>
   <select id="selectByExample" parameterType="org.game.bean.GameUrlExample" resultMap="BaseResultMap">
     select
@@ -108,13 +100,9 @@
   </delete>
   <insert id="insert" parameterType="org.game.bean.GameUrl">
     insert into gameurl (id, downLoad_url, official_url, 
-      little_pic, big_pic, new_little_pic, 
-      new_big_pic, poster, low_pic, 
-      blog_pic, common_pic)
+      pic)
     values (#{id,jdbcType=INTEGER}, #{downloadUrl,jdbcType=VARCHAR}, #{officialUrl,jdbcType=VARCHAR}, 
-      #{littlePic,jdbcType=VARCHAR}, #{bigPic,jdbcType=VARCHAR}, #{newLittlePic,jdbcType=VARCHAR}, 
-      #{newBigPic,jdbcType=VARCHAR}, #{poster,jdbcType=VARCHAR}, #{lowPic,jdbcType=VARCHAR}, 
-      #{blogPic,jdbcType=VARCHAR}, #{commonPic,jdbcType=VARCHAR})
+      #{pic,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="org.game.bean.GameUrl">
     insert into gameurl
@@ -128,29 +116,8 @@
       <if test="officialUrl != null">
         official_url,
       </if>
-      <if test="littlePic != null">
-        little_pic,
-      </if>
-      <if test="bigPic != null">
-        big_pic,
-      </if>
-      <if test="newLittlePic != null">
-        new_little_pic,
-      </if>
-      <if test="newBigPic != null">
-        new_big_pic,
-      </if>
-      <if test="poster != null">
-        poster,
-      </if>
-      <if test="lowPic != null">
-        low_pic,
-      </if>
-      <if test="blogPic != null">
-        blog_pic,
-      </if>
-      <if test="commonPic != null">
-        common_pic,
+      <if test="pic != null">
+        pic,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -163,29 +130,8 @@
       <if test="officialUrl != null">
         #{officialUrl,jdbcType=VARCHAR},
       </if>
-      <if test="littlePic != null">
-        #{littlePic,jdbcType=VARCHAR},
-      </if>
-      <if test="bigPic != null">
-        #{bigPic,jdbcType=VARCHAR},
-      </if>
-      <if test="newLittlePic != null">
-        #{newLittlePic,jdbcType=VARCHAR},
-      </if>
-      <if test="newBigPic != null">
-        #{newBigPic,jdbcType=VARCHAR},
-      </if>
-      <if test="poster != null">
-        #{poster,jdbcType=VARCHAR},
-      </if>
-      <if test="lowPic != null">
-        #{lowPic,jdbcType=VARCHAR},
-      </if>
-      <if test="blogPic != null">
-        #{blogPic,jdbcType=VARCHAR},
-      </if>
-      <if test="commonPic != null">
-        #{commonPic,jdbcType=VARCHAR},
+      <if test="pic != null">
+        #{pic,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -207,29 +153,8 @@
       <if test="record.officialUrl != null">
         official_url = #{record.officialUrl,jdbcType=VARCHAR},
       </if>
-      <if test="record.littlePic != null">
-        little_pic = #{record.littlePic,jdbcType=VARCHAR},
-      </if>
-      <if test="record.bigPic != null">
-        big_pic = #{record.bigPic,jdbcType=VARCHAR},
-      </if>
-      <if test="record.newLittlePic != null">
-        new_little_pic = #{record.newLittlePic,jdbcType=VARCHAR},
-      </if>
-      <if test="record.newBigPic != null">
-        new_big_pic = #{record.newBigPic,jdbcType=VARCHAR},
-      </if>
-      <if test="record.poster != null">
-        poster = #{record.poster,jdbcType=VARCHAR},
-      </if>
-      <if test="record.lowPic != null">
-        low_pic = #{record.lowPic,jdbcType=VARCHAR},
-      </if>
-      <if test="record.blogPic != null">
-        blog_pic = #{record.blogPic,jdbcType=VARCHAR},
-      </if>
-      <if test="record.commonPic != null">
-        common_pic = #{record.commonPic,jdbcType=VARCHAR},
+      <if test="record.pic != null">
+        pic = #{record.pic,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -241,14 +166,7 @@
     set id = #{record.id,jdbcType=INTEGER},
       downLoad_url = #{record.downloadUrl,jdbcType=VARCHAR},
       official_url = #{record.officialUrl,jdbcType=VARCHAR},
-      little_pic = #{record.littlePic,jdbcType=VARCHAR},
-      big_pic = #{record.bigPic,jdbcType=VARCHAR},
-      new_little_pic = #{record.newLittlePic,jdbcType=VARCHAR},
-      new_big_pic = #{record.newBigPic,jdbcType=VARCHAR},
-      poster = #{record.poster,jdbcType=VARCHAR},
-      low_pic = #{record.lowPic,jdbcType=VARCHAR},
-      blog_pic = #{record.blogPic,jdbcType=VARCHAR},
-      common_pic = #{record.commonPic,jdbcType=VARCHAR}
+      pic = #{record.pic,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -262,29 +180,8 @@
       <if test="officialUrl != null">
         official_url = #{officialUrl,jdbcType=VARCHAR},
       </if>
-      <if test="littlePic != null">
-        little_pic = #{littlePic,jdbcType=VARCHAR},
-      </if>
-      <if test="bigPic != null">
-        big_pic = #{bigPic,jdbcType=VARCHAR},
-      </if>
-      <if test="newLittlePic != null">
-        new_little_pic = #{newLittlePic,jdbcType=VARCHAR},
-      </if>
-      <if test="newBigPic != null">
-        new_big_pic = #{newBigPic,jdbcType=VARCHAR},
-      </if>
-      <if test="poster != null">
-        poster = #{poster,jdbcType=VARCHAR},
-      </if>
-      <if test="lowPic != null">
-        low_pic = #{lowPic,jdbcType=VARCHAR},
-      </if>
-      <if test="blogPic != null">
-        blog_pic = #{blogPic,jdbcType=VARCHAR},
-      </if>
-      <if test="commonPic != null">
-        common_pic = #{commonPic,jdbcType=VARCHAR},
+      <if test="pic != null">
+        pic = #{pic,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -293,14 +190,7 @@
     update gameurl
     set downLoad_url = #{downloadUrl,jdbcType=VARCHAR},
       official_url = #{officialUrl,jdbcType=VARCHAR},
-      little_pic = #{littlePic,jdbcType=VARCHAR},
-      big_pic = #{bigPic,jdbcType=VARCHAR},
-      new_little_pic = #{newLittlePic,jdbcType=VARCHAR},
-      new_big_pic = #{newBigPic,jdbcType=VARCHAR},
-      poster = #{poster,jdbcType=VARCHAR},
-      low_pic = #{lowPic,jdbcType=VARCHAR},
-      blog_pic = #{blogPic,jdbcType=VARCHAR},
-      common_pic = #{commonPic,jdbcType=VARCHAR}
+      pic = #{pic,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

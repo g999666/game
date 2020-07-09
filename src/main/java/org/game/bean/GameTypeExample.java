@@ -233,6 +233,66 @@ public class GameTypeExample {
             addCriterion("type_name not between", value1, value2, "typeName");
             return (Criteria) this;
         }
+
+        public Criteria andTopflagIsNull() {
+            addCriterion("topFlag is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTopflagIsNotNull() {
+            addCriterion("topFlag is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTopflagEqualTo(Integer value) {
+            addCriterion("topFlag =", value, "topflag");
+            return (Criteria) this;
+        }
+
+        public Criteria andTopflagNotEqualTo(Integer value) {
+            addCriterion("topFlag <>", value, "topflag");
+            return (Criteria) this;
+        }
+
+        public Criteria andTopflagGreaterThan(Integer value) {
+            addCriterion("topFlag >", value, "topflag");
+            return (Criteria) this;
+        }
+
+        public Criteria andTopflagGreaterThanOrEqualTo(Integer value) {
+            addCriterion("topFlag >=", value, "topflag");
+            return (Criteria) this;
+        }
+
+        public Criteria andTopflagLessThan(Integer value) {
+            addCriterion("topFlag <", value, "topflag");
+            return (Criteria) this;
+        }
+
+        public Criteria andTopflagLessThanOrEqualTo(Integer value) {
+            addCriterion("topFlag <=", value, "topflag");
+            return (Criteria) this;
+        }
+
+        public Criteria andTopflagIn(List<Integer> values) {
+            addCriterion("topFlag in", values, "topflag");
+            return (Criteria) this;
+        }
+
+        public Criteria andTopflagNotIn(List<Integer> values) {
+            addCriterion("topFlag not in", values, "topflag");
+            return (Criteria) this;
+        }
+
+        public Criteria andTopflagBetween(Integer value1, Integer value2) {
+            addCriterion("topFlag between", value1, value2, "topflag");
+            return (Criteria) this;
+        }
+
+        public Criteria andTopflagNotBetween(Integer value1, Integer value2) {
+            addCriterion("topFlag not between", value1, value2, "topflag");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

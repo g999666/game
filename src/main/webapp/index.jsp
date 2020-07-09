@@ -78,108 +78,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!----->
     <div class="col-mn">
         <div class="container">
-            <div class="col-mn2">
-                <h3>The Best Features</h3>
-                <p>Contrary to popular belief
-                    , Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
-                <a class=" more-in" href="single.html">Read More</a>
+            <div class="col-mn2" id="posterField">
             </div>
         </div>
     </div>
     <!---->
     <div class="featured">
-        <div class="container">
-            <div class="col-md-4 latest">
-                <h4>Latest</h4>
-                <div class="late">
-                    <a href="single.html" class="fashion"><img class="img-responsive " src="/statics/images/low/la.jpg" alt=""></a>
-                    <div class="grid-product">
-                        <span>6 Apr, 2015</span>
-                        <p><a href="single.html"> Ipsum dolor sit amet, consectetuer adipiscing elit,it has roots </a></p>
-                        <a class="comment" href="single.html"><i> </i> 0 Comments</a>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="late">
-                    <a href="single.html" class="fashion"><img class="img-responsive " src="/statics/images/low/la1.jpg" alt=""></a>
-                    <div class="grid-product">
-                        <span>6 Apr, 2015</span>
-                        <p><a href="single.html"> Ipsum dolor sit amet, consectetuer adipiscing elit,it has roots </a></p>
-                        <a class="comment" href="single.html"><i> </i> 0 Comments</a>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="late">
-                    <a href="single.html" class="fashion"><img class="img-responsive " src="/statics/images/low/la2.jpg" alt=""></a>
-                    <div class="grid-product">
-                        <span>6 Apr, 2015</span>
-                        <p><a href="single.html"> Ipsum dolor sit amet, consectetuer adipiscing elit,it has roots </a></p>
-                        <a class="comment" href="single.html"><i> </i> 0 Comments</a>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-            <div class="col-md-4 latest">
-                <h4>Featured</h4>
-                <div class="late">
-                    <a href="single.html" class="fashion"><img class="img-responsive " src="/statics/images/low/la3.jpg" alt=""></a>
-                    <div class="grid-product">
-                        <span>6 Apr, 2015</span>
-                        <p><a href="single.html"> Ipsum dolor sit amet, consectetuer adipiscing elit,it has roots </a></p>
-                        <a class="comment" href="single.html"><i> </i> 0 Comments</a>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="late">
-                    <a href="single.html" class="fashion"><img class="img-responsive " src="/statics/images/low/la2.jpg" alt=""></a>
-                    <div class="grid-product">
-                        <span>6 Apr, 2015</span>
-                        <p><a href="single.html"> Ipsum dolor sit amet, consectetuer adipiscing elit,it has roots </a></p>
-                        <a class="comment" href="single.html"><i> </i> 0 Comments</a>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="late">
-                    <a href="single.html" class="fashion"><img class="img-responsive " src="/statics/images/low/la1.jpg" alt=""></a>
-                    <div class="grid-product">
-                        <span>6 Apr, 2015</span>
-                        <p><a href="single.html"> Ipsum dolor sit amet, consectetuer adipiscing elit,it has roots </a></p>
-                        <a class="comment" href="single.html"><i> </i> 0 Comments</a>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-            <div class="col-md-4 latest">
-                <h4>Popular</h4>
-                <div class="late">
-                    <a href="single.html" class="fashion"><img class="img-responsive " src="/statics/images/low/la1.jpg" alt=""></a>
-                    <div class="grid-product">
-                        <span>6 Apr, 2015</span>
-                        <p><a href="single.html"> Ipsum dolor sit amet, consectetuer adipiscing elit,it has roots </a></p>
-                        <a class="comment" href="single.html"><i> </i> 0 Comments</a>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="late">
-                    <a href="single.html" class="fashion"><img class="img-responsive " src="/statics/images/low/la.jpg" alt=""></a>
-                    <div class="grid-product">
-                        <span>6 Apr, 2015</span>
-                        <p><a href="single.html"> Ipsum dolor sit amet, consectetuer adipiscing elit,it has roots </a></p>
-                        <a class="comment" href="single.html"><i> </i> 0 Comments</a>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="late">
-                    <a href="single.html" class="fashion"><img class="img-responsive " src="/statics/images/low/la3.jpg" alt=""></a>
-                    <div class="grid-product">
-                        <span>6 Apr, 2015</span>
-                        <p><a href="single.html"> Ipsum dolor sit amet, consectetuer adipiscing elit,it has roots </a></p>
-                        <a class="comment" href="single.html"><i> </i> 0 Comments</a>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-            <div class="clearfix"> </div>
+        <div class="container" id="gameTypes">
         </div>
     </div>
 </div>
@@ -193,25 +98,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         "url": "game/List/new/9",
         "type": "get",
         "success": function (result) {
+            Grid.init();
             var items = result.extend.rank;
             $.each(items, function (index, item) {
                 var ull=$("<div></div>").attr("id","og-grid").addClass("og-grid");
                 var lil = $("<li></li>");
-                var al = $("<a></a>").attr("href", "#").attr("data-largesrc", "/statics/images/thumbs/thumb1/" + item.gameU.newBigPic).attr("data-title", item.gameName).attr("data-description", item.gameDesc);
-                var il = $("<img/>").addClass("img-responsive").attr("src", "/statics/images/thumbs/thumb2/" + item.gameU.newLittlePic).attr("alt", "img" + index);
-                var cli = $("<div></div>").addClass("clearfix");
+                var al = $("<a></a>").attr("href", "#").attr("data-largesrc", "/statics/images/thumbs/thumb1/" + item.gameU.pic).attr("data-title", item.gameName).attr("data-description", item.gameDesc);
+                var il = $("<img/>").addClass("img-responsive").attr("src", "/statics/images/thumbs/thumb2/" + item.gameU.pic).attr("alt", "img" + index);
                 ull = ull.append(lil);
                 ull.appendTo(".main");
                 lil = lil.append(al.append(il)).appendTo('#og-grid');
-                cli.appendTo('#og-grid');
-                Grid.init();
                 Grid.addItems(lil);
             })
+            var cli = $("<div></div>").addClass("clearfix");
+            cli.appendTo('#og-grid');
         },
         "error": function () {
             alert("error");
         }
     });
+
 </script>
 </body>
 </html>

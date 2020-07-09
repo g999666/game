@@ -11,8 +11,6 @@ public class User {
 
     private String userEmail;
 
-    private String userHead;
-
     private Integer identityId;
 
     private String headPic;
@@ -51,14 +49,6 @@ public class User {
 
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail == null ? null : userEmail.trim();
-    }
-
-    public String getUserHead() {
-        return userHead;
-    }
-
-    public void setUserHead(String userHead) {
-        this.userHead = userHead == null ? null : userHead.trim();
     }
 
     public Integer getIdentityId() {

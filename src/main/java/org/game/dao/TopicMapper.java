@@ -28,4 +28,8 @@ public interface TopicMapper {
     int updateByPrimaryKeySelective(Topic record);
 
     int updateByPrimaryKey(Topic record);
+
+    int topicCountByGameId(int id);
+
+
 }

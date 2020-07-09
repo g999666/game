@@ -1,7 +1,6 @@
 package org.game.bean;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class GameExample {
@@ -375,113 +374,53 @@ public class GameExample {
             return (Criteria) this;
         }
 
-        public Criteria andLastTopicEqualTo(Date value) {
+        public Criteria andLastTopicEqualTo(Integer value) {
             addCriterion("last_topic =", value, "lastTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLastTopicNotEqualTo(Date value) {
+        public Criteria andLastTopicNotEqualTo(Integer value) {
             addCriterion("last_topic <>", value, "lastTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLastTopicGreaterThan(Date value) {
+        public Criteria andLastTopicGreaterThan(Integer value) {
             addCriterion("last_topic >", value, "lastTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLastTopicGreaterThanOrEqualTo(Date value) {
+        public Criteria andLastTopicGreaterThanOrEqualTo(Integer value) {
             addCriterion("last_topic >=", value, "lastTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLastTopicLessThan(Date value) {
+        public Criteria andLastTopicLessThan(Integer value) {
             addCriterion("last_topic <", value, "lastTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLastTopicLessThanOrEqualTo(Date value) {
+        public Criteria andLastTopicLessThanOrEqualTo(Integer value) {
             addCriterion("last_topic <=", value, "lastTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLastTopicIn(List<Date> values) {
+        public Criteria andLastTopicIn(List<Integer> values) {
             addCriterion("last_topic in", values, "lastTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLastTopicNotIn(List<Date> values) {
+        public Criteria andLastTopicNotIn(List<Integer> values) {
             addCriterion("last_topic not in", values, "lastTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLastTopicBetween(Date value1, Date value2) {
+        public Criteria andLastTopicBetween(Integer value1, Integer value2) {
             addCriterion("last_topic between", value1, value2, "lastTopic");
             return (Criteria) this;
         }
 
-        public Criteria andLastTopicNotBetween(Date value1, Date value2) {
+        public Criteria andLastTopicNotBetween(Integer value1, Integer value2) {
             addCriterion("last_topic not between", value1, value2, "lastTopic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLastPostedtopicIsNull() {
-            addCriterion("last_postedTopic is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andLastPostedtopicIsNotNull() {
-            addCriterion("last_postedTopic is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andLastPostedtopicEqualTo(Date value) {
-            addCriterion("last_postedTopic =", value, "lastPostedtopic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLastPostedtopicNotEqualTo(Date value) {
-            addCriterion("last_postedTopic <>", value, "lastPostedtopic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLastPostedtopicGreaterThan(Date value) {
-            addCriterion("last_postedTopic >", value, "lastPostedtopic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLastPostedtopicGreaterThanOrEqualTo(Date value) {
-            addCriterion("last_postedTopic >=", value, "lastPostedtopic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLastPostedtopicLessThan(Date value) {
-            addCriterion("last_postedTopic <", value, "lastPostedtopic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLastPostedtopicLessThanOrEqualTo(Date value) {
-            addCriterion("last_postedTopic <=", value, "lastPostedtopic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLastPostedtopicIn(List<Date> values) {
-            addCriterion("last_postedTopic in", values, "lastPostedtopic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLastPostedtopicNotIn(List<Date> values) {
-            addCriterion("last_postedTopic not in", values, "lastPostedtopic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLastPostedtopicBetween(Date value1, Date value2) {
-            addCriterion("last_postedTopic between", value1, value2, "lastPostedtopic");
-            return (Criteria) this;
-        }
-
-        public Criteria andLastPostedtopicNotBetween(Date value1, Date value2) {
-            addCriterion("last_postedTopic not between", value1, value2, "lastPostedtopic");
             return (Criteria) this;
         }
     }
