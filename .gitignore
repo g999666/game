@@ -3,4 +3,7 @@
 #!lib.txt     #但lib.txt除外
 .idea/
 target/
+video/
+images/
+dbconfig.properties
 *.iml
