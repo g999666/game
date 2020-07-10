@@ -48,7 +48,7 @@
                     <ul>
                         <li class="active"><a class="color1" href="${APP_PATH}/index.jsp">主页</a></li>
                         <li><a class="color2" href="/games/all">游戏</a></li>
-                        <li><a class="color3" href="/reviews">评论</a></li>
+                        <li><a class="color3" href="/charge">收费</a></li>
                         <li><a class="color4" href="/404">新闻</a></li>
                         <li><a class="color5" href="/blog">论坛</a></li>
                         <li><a class="color6" href="/contact">反馈</a></li>

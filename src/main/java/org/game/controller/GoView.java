@@ -69,9 +69,9 @@ public class GoView {
     public String goBlog(){
         return "blog";
     }
-    @RequestMapping("/reviews")
-    public String goReviews(){
-        return "reviews";
+    @RequestMapping("/charge")
+    public String goCharge(){
+        return "charge";
     }
     @RequestMapping("/404")
     public String go404(){
