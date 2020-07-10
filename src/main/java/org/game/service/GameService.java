@@ -2,6 +2,7 @@ package org.game.service;
 
 import org.game.bean.Game;
 import org.game.bean.GameTypeExample;
+import org.game.bean.Topic;
 import org.game.dao.GameMapper;
 import org.game.dao.GameTypeMapper;
 import org.game.dao.TopicMapper;
@@ -38,7 +39,6 @@ public class GameService {
         List<Game>  games = gameMapper.selectGameByRankName(rankName,num);
         return games;
     }
-
     /**
      * 需要查是在首页的所有类型名字，名字放arraylist
      * 循环去数据库查改类型的数据列表
@@ -64,4 +64,16 @@ public class GameService {
     }
 
 
+    public boolean insertContent(String content) {
+        Topic topic = new Topic();
+        topic.setContent(content);
+        topic.setParentId(1);
+        topic.setGameId(0);
+        topic.setFromUid(1);
+        int insert = topicMapper.insertSelective(topic);
+        if (insert != 1) {
+            return false;
+        }
+        return true;
+    }
 }

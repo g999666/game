@@ -30,11 +30,12 @@ CREATE TABLE `game` (
   UNIQUE KEY `unurl` (`game_url`),
   KEY `game_url` (`game_url`) USING BTREE,
   CONSTRAINT `fk_gurl` FOREIGN KEY (`game_url`) REFERENCES `gameurl` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 /*Data for the table `game` */
 
 insert  into `game`(`id`,`game_name`,`game_desc`,`game_url`,`last_topic`) values 
+(0,'admin','系统',0,NULL),
 (1,'愤怒的小鸟','愤怒的小鸟描述',1,1),
 (2,'侠盗飞车','侠盗飞车描述',2,NULL),
 (3,'极品飞车','飞车描述',3,NULL),
@@ -95,11 +96,12 @@ CREATE TABLE `gameurl` (
   `official_url` varchar(255) DEFAULT NULL COMMENT '游戏官网',
   `pic` varchar(255) DEFAULT NULL COMMENT 'top小图片',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 /*Data for the table `gameurl` */
 
 insert  into `gameurl`(`id`,`downLoad_url`,`official_url`,`pic`) values 
+(0,NULL,NULL,'0'),
 (1,'null','null','la1.jpg'),
 (2,'null','null','la2.jpg'),
 (3,'null','null','la3.jpg'),
@@ -141,14 +143,24 @@ CREATE TABLE `topic` (
   KEY `fk_fg` (`game_id`),
   CONSTRAINT `fk_fg` FOREIGN KEY (`game_id`) REFERENCES `game` (`id`),
   CONSTRAINT `fk_fu` FOREIGN KEY (`from_uid`) REFERENCES `user` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 /*Data for the table `topic` */
 
 insert  into `topic`(`id`,`game_id`,`content`,`from_uid`,`parent_id`,`good`,`low`,`create_time`,`modify_time`) values 
 (1,1,'摸鱼',1,0,0,0,'2020-07-07 16:21:58',NULL),
 (2,1,'摸鱼1',1,0,0,0,'2020-07-07 16:21:50',NULL),
-(3,2,'摸鱼2',1,0,0,0,'2020-07-07 16:21:11',NULL);
+(3,2,'摸鱼2',1,0,0,0,'2020-07-07 16:21:11',NULL),
+(4,0,'123',1,1,0,0,'2020-07-10 09:42:33',NULL),
+(5,0,'qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq&_&OIPM',1,1,0,0,'2020-07-10 09:54:02',NULL),
+(6,0,'1231231&_&1111111111111111111111111111111111111111111111111111111111111111111',1,1,0,0,'2020-07-10 09:56:05',NULL),
+(7,0,'1231231&_&1111111111111111111111111111111111111111111111111111111111111111111',1,1,0,0,'2020-07-10 09:57:23',NULL),
+(8,0,'12312111&_&222222222222222222222222222222222222222222222222222222222222222222',1,1,0,0,'2020-07-10 09:57:41',NULL),
+(9,0,'1231231&_&1111111111111111111111111111111111111111111111111111111111111111111111111111111',1,1,0,0,'2020-07-10 10:04:10',NULL),
+(10,0,'1231231&_&我真的就方法 佛涩废和搜if饿死of杰恩斯of金额死哦乏味金佛大家我的',1,1,0,0,'2020-07-10 10:05:58',NULL),
+(11,0,'1231231&_&，。、，。，、，。、‘&1231231313’&2131312312#!@%%!qw单位ID阿无敌哈维',1,1,0,0,'2020-07-10 10:20:44',NULL),
+(12,0,'主题123123&_&12312312312.,/.;[];[];]>\"\"}}\"?}>}:。】‘’‘’】【。】】【》}{}》}》}》}》}》！@#@！￥@！%@！#@￥￥￥}。、',1,1,0,0,'2020-07-10 10:25:30',NULL),
+(13,0,'主题111&_&123213><\":|e1231312312312312321312312123123123213,faiawfjawoifawiufhiafwafawf',1,1,0,0,'2020-07-10 10:26:28',NULL);
 
 /*Table structure for table `user` */
 
