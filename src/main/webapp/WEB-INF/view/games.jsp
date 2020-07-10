@@ -9,7 +9,7 @@
 <script src="${APP_PATH}/statics/js/jquery.min.js"></script>
 <!-- Custom Theme files -->
 <!--theme-style-->
-<link href="${APP_PATH}/statics/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="${APP_PATH}/statics/css/style1.css" rel="stylesheet" type="text/css" media="all" />
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />

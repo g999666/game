@@ -4,6 +4,6 @@
 .idea/
 target/
 video/
-images/
+#images/
 dbconfig.properties
 *.iml

@@ -7,7 +7,7 @@
     <link href="statics/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
     <script src="statics/js/jquery.min.js"></script>
     <script src="statics/js/index_top.js"></script>
-    <link href="statics/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="statics/css/style1.css" rel="stylesheet" type="text/css" media="all"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Games Center Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
