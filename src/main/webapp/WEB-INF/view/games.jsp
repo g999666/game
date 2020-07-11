@@ -61,7 +61,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				"url":"/game/"+$("h2").text()+"/"+pageNum,
 				"type": "get",
 				"success": function (result) {
-					console.log(result);
 					build_content(result);
 					build_pageField(result);
 				},

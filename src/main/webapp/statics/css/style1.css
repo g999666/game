@@ -125,6 +125,10 @@ font-family: 'Montserrat Alternates', sans-serif;
 .top-nav ul li a.color6:hover{
 	background:#FFE500;
 }
+.top-nav ul li a.color7:hover{
+	background: #8fbf00;
+}
+
 .header-top {
 	background:#fff;
 	  padding: 2em 0 ;

@@ -6,29 +6,31 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%pageContext.getRequest().setAttribute("APP_PATH", request.getContextPath());%>
+<%pageContext.getRequest().setAttribute("APP_PATH", request.getContextPath());%></>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
-<div class="header" >
-    <div class="top-header" >
+<div class="header">
+    <div class="top-header">
         <div class="container">
-            <div class="top-head" >
+            <div class="top-head">
                 <ul class="header-in">
-                    <li ><a href="#" >  帮助</a></li>
-                    <li><a href="contact.jsp">   反馈</a></li>
-                    <li ><a href="#" >   如何使用</a></li>
+                    <li><a href="#"> 帮助</a></li>
+                    <li><a href="contact.jsp"> 反馈</a></li>
+                    <li><a href="#"> 如何使用</a></li>
                 </ul>
                 <div class="search">
                     <form>
-                        <input type="text" value="搜索些什么 ?" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'search about something ?';}" >
-                        <input type="submit" value="" >
+                        <input type="text" value="搜索些什么 ?" onfocus="this.value = '';"
+                               onblur="if (this.value == '') {this.value = 'search about something ?';}">
+                        <input type="submit" value="">
                     </form>
                 </div>
 
-                <div class="clearfix"> </div>
+                <div class="clearfix"></div>
             </div>
         </div>
     </div>
@@ -48,25 +50,26 @@
                     <ul>
                         <li class="active"><a class="color1" href="${APP_PATH}/index.jsp">主页</a></li>
                         <li><a class="color2" href="/games/all">游戏</a></li>
-                        <li><a class="color3" href="/charge">收费</a></li>
+                        <li><a class="color3" href="/reviews">收费</a></li>
                         <li><a class="color4" href="/404">新闻</a></li>
                         <li><a class="color5" href="/blog">论坛</a></li>
                         <li><a class="color6" href="/contact">反馈</a></li>
-
+                        <c:if test="${empty sessionScope.user.userName}"><li><a class="color7" href="/login">请登录</a></li></c:if>
+                        <c:if test="${not empty sessionScope.user.userName}"><li><a class="color7" href="#">${sessionScope.user.userName}</a></li></c:if>
                         <div class="clearfix"></div>
                     </ul>
 
                     <!--script-->
                     <script>
-                        $("span.menu").click(function(){
-                            $(".top-nav ul").slideToggle(500, function(){
+                        $("span.menu").click(function () {
+                            $(".top-nav ul").slideToggle(500, function () {
                             });
                         });
                     </script>
 
                 </div>
 
-                <div class="clearfix"> </div>
+                <div class="clearfix"></div>
             </div>
         </div>
     </div>

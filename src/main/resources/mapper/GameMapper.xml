@@ -70,7 +70,7 @@
     id, game_name, game_desc, game_url, last_topic
   </sql>
 
-   <sql id="rank_Column_List">
+        <sql id="rank_Column_List">
 	game.id,
 	gametype.type_name,
 	game.game_name,
@@ -185,6 +185,7 @@ WHERE
 GROUP BY
 	game.id
 </select>
+
 
 
 

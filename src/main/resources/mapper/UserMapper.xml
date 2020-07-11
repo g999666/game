@@ -7,6 +7,7 @@
     <result column="user_password" jdbcType="VARCHAR" property="userPassword" />
     <result column="user_email" jdbcType="VARCHAR" property="userEmail" />
     <result column="identity_id" jdbcType="INTEGER" property="identityId" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
     <result column="head_pic" jdbcType="VARCHAR" property="headPic" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
@@ -70,7 +71,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    user_id, user_name, user_password, user_email, identity_id, head_pic, create_time, 
+    user_id, user_name, user_password, user_email, identity_id, phone, head_pic, create_time, 
     modify_time
   </sql>
   <select id="selectByExample" parameterType="org.game.bean.UserExample" resultMap="BaseResultMap">
@@ -105,11 +106,13 @@
   </delete>
   <insert id="insert" parameterType="org.game.bean.User">
     insert into user (user_id, user_name, user_password, 
-      user_email, identity_id, head_pic, 
-      create_time, modify_time)
+      user_email, identity_id, phone, 
+      head_pic, create_time, modify_time
+      )
     values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userPassword,jdbcType=VARCHAR}, 
-      #{userEmail,jdbcType=VARCHAR}, #{identityId,jdbcType=INTEGER}, #{headPic,jdbcType=VARCHAR}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP})
+      #{userEmail,jdbcType=VARCHAR}, #{identityId,jdbcType=INTEGER}, #{phone,jdbcType=VARCHAR}, 
+      #{headPic,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{modifyTime,jdbcType=TIMESTAMP}
+      )
   </insert>
   <insert id="insertSelective" parameterType="org.game.bean.User">
     insert into user
@@ -128,6 +131,9 @@
       </if>
       <if test="identityId != null">
         identity_id,
+      </if>
+      <if test="phone != null">
+        phone,
       </if>
       <if test="headPic != null">
         head_pic,
@@ -154,6 +160,9 @@
       </if>
       <if test="identityId != null">
         #{identityId,jdbcType=INTEGER},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
       </if>
       <if test="headPic != null">
         #{headPic,jdbcType=VARCHAR},
@@ -190,6 +199,9 @@
       <if test="record.identityId != null">
         identity_id = #{record.identityId,jdbcType=INTEGER},
       </if>
+      <if test="record.phone != null">
+        phone = #{record.phone,jdbcType=VARCHAR},
+      </if>
       <if test="record.headPic != null">
         head_pic = #{record.headPic,jdbcType=VARCHAR},
       </if>
@@ -211,6 +223,7 @@
       user_password = #{record.userPassword,jdbcType=VARCHAR},
       user_email = #{record.userEmail,jdbcType=VARCHAR},
       identity_id = #{record.identityId,jdbcType=INTEGER},
+      phone = #{record.phone,jdbcType=VARCHAR},
       head_pic = #{record.headPic,jdbcType=VARCHAR},
       create_time = #{record.createTime,jdbcType=TIMESTAMP},
       modify_time = #{record.modifyTime,jdbcType=TIMESTAMP}
@@ -233,6 +246,9 @@
       <if test="identityId != null">
         identity_id = #{identityId,jdbcType=INTEGER},
       </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
       <if test="headPic != null">
         head_pic = #{headPic,jdbcType=VARCHAR},
       </if>
@@ -251,6 +267,7 @@
       user_password = #{userPassword,jdbcType=VARCHAR},
       user_email = #{userEmail,jdbcType=VARCHAR},
       identity_id = #{identityId,jdbcType=INTEGER},
+      phone = #{phone,jdbcType=VARCHAR},
       head_pic = #{headPic,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       modify_time = #{modifyTime,jdbcType=TIMESTAMP}

@@ -19,19 +19,6 @@ public class Topic extends TopicKey {
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date createTime;
 
-    @Override
-    public String toString() {
-        return "Topic{" +
-                "gameId=" + gameId +
-                ", content='" + content + '\'' +
-                ", parentId=" + parentId +
-                ", good=" + good +
-                ", low=" + low +
-                ", createTime=" + createTime +
-                ", modifyTime=" + modifyTime +
-                '}';
-    }
-
     private Date modifyTime;
 
     public Integer getGameId() {

@@ -271,12 +271,12 @@
       modify_time = #{modifyTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
       and from_uid = #{fromUid,jdbcType=INTEGER}
-  </update><select id="topicCountByGameId" resultType="int">
+  </update>
+  <select id="topicCountByGameId" resultType="int">
       select count(t.id)
     from game g,topic t
     where t.game_id = g.id
     and g.id=#{id}
 </select>
-
 
 </mapper>
