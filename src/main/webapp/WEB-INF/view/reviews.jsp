@@ -3,8 +3,14 @@
 <html lang="CN">
 <head>
     <title>Reviews</title>
-    <link href="${APP_PATH}/statics/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <%--     <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+  <%--   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+      <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>--%>
+    <link rel="stylesheet" href="/statics/css/style2.css">
+    <link href="${APP_PATH}/statics/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/statics/css/bootstrap.css">
     <script src="${APP_PATH}/statics/js/jquery.min.js"></script>
+    <script src="${APP_PATH}/statics/js/bootstrap.min.js"></script>
     <script type="application/x-javascript"> addEventListener("load", function () {
         setTimeout(hideURLbar, 0);
     }, false);
@@ -28,10 +34,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <link href='#css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
     <link href='#css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
     <script src="${APP_PATH}/statics/js/reviews.js"></script>
-<%--    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">--%>
-    <link rel="stylesheet" href="${APP_PATH}/statics/css/bootstrap.css">
-    <script src="${APP_PATH}/statics/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<%--    <link rel="stylesheet" href="${APP_PATH}/statics/css/bootstrap.css">--%>
 	<script src="/statics/js/jquery.magnific-popup.js" type="text/javascript"></script>
 	<script type="text/javascript" src="/statics/js/modernizr.custom.53451.js"></script>
     <style>
@@ -47,7 +52,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <%@include file="header.jsp" %>
 
 <!--content-->
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="6000">
     <!-- Indicators -->
     <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -59,21 +64,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="carousel-inner" role="listbox" id="reviews_Click">
         <div class="item active">
             <img src="${APP_PATH}/statics/images/blog/sin1.jpg" alt="...">
-            <div class="carousel-caption">
-                dfdfdfdfdfdf
-            </div>
         </div>
         <div class="item">
             <img src="${APP_PATH}/statics/images/blog/sin1.jpg" alt="...">
-            <div class="carousel-caption">
-                ...
-            </div>
         </div>
         <div class="item">
             <img src="${APP_PATH}/statics/images/blog/sin1.jpg" alt="...">
-            <div class="carousel-caption">
-                ...
-            </div>
         </div>
     </div>
 
@@ -98,7 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="gallery-grid">
                 <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
                    href="#small-dialog">
-                    <img src="/statics/images/temp/g1.jpg" alt=" " class="img-responsive zoom-img"/>
+                    <img src="/statics/images/charge/g1.jpg" alt=" " class="img-responsive zoom-img"/>
                 </a>
                 <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
                    href="#small-dialog2">
@@ -112,13 +108,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </a>
                 <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
                    href="#small-dialog4">
-                    <img src="/statics/images/temp/g5.jpg" alt=" " class="img-responsive zoom-img"/>
+                    <img src="/statics/images/charge/g5.jpg" alt=" " class="img-responsive zoom-img"/>
                 </a>
             </div>
             <div class="gallery-grid">
                 <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
                    href="#small-dialog5">
-                    <img src="/statics/images/temp/g6.jpg" alt=" " class="img-responsive zoom-img"/>
+                    <img src="/statics/images/charge/g6.jpg" alt=" " class="img-responsive zoom-img"/>
                 </a>
                 <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
                    href="#small-dialog6">
@@ -132,10 +128,134 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </a>
                 <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
                    href="#small-dialog8">
-                    <img src="/statics/images/temp/g8.jpg" alt=" " class="img-responsive zoom-img"/>
+                    <img src="/statics/images/charge/g8.jpg" alt=" " class="img-responsive zoom-img"/>
                 </a>
             </div>
             <div class="clearfix"></div>
+        </div>
+        <div id="tour">
+            <section class="center ">
+                <h2>热门旅游</h2>
+                <p>国内旅游，国外旅游、自助旅游、自驾旅游、游轮签证、主题旅游等各种最新热门旅游推介</p>
+            </section>
+            <figure>
+                <img src="/statics/images/img/tour1.png" alt="">
+                <figcaption>
+                    <div class="tour_title">
+                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
+                    </div>
+                    <div class="info">
+                        <em class="sat">满意度97%</em>
+                        <span class="price"> ￥<strong> 2864</strong> 起</span>
+                    </div>
+                    <div class="type">国内长线</div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="/statics/images/img/tour2.png" alt="">
+                <figcaption>
+                    <div class="tour_title">
+                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
+                    </div>
+                    <div class="info">
+                        <em class="sat">满意度97%</em>
+                        <span class="price"> ￥<strong> 2864</strong> 起</span>
+                    </div>
+                    <div class="type">国内长线</div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="/statics/images/img/tour3.png" alt="">
+                <figcaption>
+                    <div class="tour_title">
+                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
+                    </div>
+                    <div class="info">
+                        <em class="sat">满意度97%</em>
+                        <span class="price"> ￥<strong> 2864</strong> 起</span>
+                    </div>
+                    <div class="type">国内长线</div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="/statics/images/img/tour4.png" alt="">
+                <figcaption>
+                    <div class="tour_title">
+                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
+                    </div>
+                    <div class="info">
+                        <em class="sat">满意度97%</em>
+                        <span class="price"> ￥<strong> 2864</strong> 起</span>
+                    </div>
+                    <div class="type">国内长线</div>
+                </figcaption>
+
+            </figure>
+            <figure>
+                <img src="/statics/images/img/tour5.png" alt="">
+                <figcaption>
+                    <div class="tour_title">
+                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
+                    </div>
+                    <div class="info">
+                        <em class="sat">满意度97%</em>
+                        <span class="price"> ￥<strong> 2864</strong> 起</span>
+                    </div>
+                    <div class="type">国内长线</div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="/statics/images/img/tour6.png" alt="">
+                <figcaption>
+                    <div class="tour_title">
+                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
+                    </div>
+                    <div class="info">
+                        <em class="sat">满意度97%</em>
+                        <span class="price"> ￥<strong> 2864</strong> 起</span>
+                    </div>
+                    <div class="type">国内长线</div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="/statics/images/img/tour7.png" alt="">
+                <figcaption>
+                    <div class="tour_title">
+                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
+                    </div>
+                    <div class="info">
+                        <em class="sat">满意度97%</em>
+                        <span class="price"> ￥<strong> 2864</strong> 起</span>
+                    </div>
+                    <div class="type">国内长线</div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="/statics/images/img/tour8.png" alt="">
+                <figcaption>
+                    <div class="tour_title">
+                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
+                    </div>
+                    <div class="info">
+                        <em class="sat">满意度97%</em>
+                        <span class="price"> ￥<strong> 2864</strong> 起</span>
+                    </div>
+                    <div class="type">国内长线</div>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="/statics/images/img/tour9.png" alt="">
+                <figcaption>
+                    <div class="tour_title">
+                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
+                    </div>
+                    <div class="info">
+                        <em class="sat">满意度97%</em>
+                        <span class="price"> ￥<strong> 2864</strong> 起</span>
+                    </div>
+                    <div class="type">国内长线</div>
+                </figcaption>
+            </figure>
         </div>
     </div>
 </div>
@@ -160,7 +280,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div id="small-dialog" class="mfp-hide book-form">
         <div class="pop-up-content-agileits-w3layouts">
             <div class="col-md-6 w3ls-left">
-                <img src="/statics/images/temp/g1.jpg" alt=" " class="img-responsive zoom-img"/>
+                <img src="/statics/images/charge/g1.jpg" alt=" " class="img-responsive zoom-img"/>
             </div>
             <div class="col-md-6 w3ls-right">
                 <h4>Game-1</h4>
@@ -191,7 +311,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div id="small-dialog2" class="mfp-hide book-form">
         <div class="pop-up-content-agileits-w3layouts">
             <div class="col-md-6 w3ls-left">
-                <img src="/statics/images/temp/g2big.jpg" alt=" " class="img-responsive zoom-img"/>
+                <img src="/statics/images/chargeBig/1.jpg" alt=" " class="img-responsive zoom-img"/>
             </div>
             <div class="col-md-6 w3ls-right">
                 <h4>Game-2</h4>
@@ -222,7 +342,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div id="small-dialog3" class="mfp-hide book-form">
         <div class="pop-up-content-agileits-w3layouts">
             <div class="col-md-6 w3ls-left">
-                <img src="/statics/images/temp/g3big.jpg" alt=" " class="img-responsive zoom-img"/>
+                <img src="/statics/images/chargeBig/2.jpg" alt=" " class="img-responsive zoom-img"/>
             </div>
             <div class="col-md-6 w3ls-right">
                 <h4>Game-3</h4>
@@ -253,7 +373,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div id="small-dialog4" class="mfp-hide book-form">
         <div class="pop-up-content-agileits-w3layouts">
             <div class="col-md-6 w3ls-left">
-                <img src="/statics/images/temp/g5.jpg" alt=" " class="img-responsive zoom-img"/>
+                <img src="/statics/images/charge/g5.jpg" alt=" " class="img-responsive zoom-img"/>
             </div>
             <div class="col-md-6 w3ls-right">
                 <h4>Game-4</h4>
@@ -284,7 +404,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div id="small-dialog5" class="mfp-hide book-form">
         <div class="pop-up-content-agileits-w3layouts">
             <div class="col-md-6 w3ls-left">
-                <img src="/statics/images/temp/g6.jpg" alt=" " class="img-responsive zoom-img"/>
+                <img src="/statics/images/charge/g6.jpg" alt=" " class="img-responsive zoom-img"/>
             </div>
             <div class="col-md-6 w3ls-right">
                 <h4>Game-5</h4>
@@ -315,7 +435,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div id="small-dialog6" class="mfp-hide book-form">
         <div class="pop-up-content-agileits-w3layouts">
             <div class="col-md-6 w3ls-left">
-                <img src="/statics/images/temp/g7big.jpg" alt=" " class="img-responsive zoom-img"/>
+                <img src="/statics/images/chargeBig/4.jpg" alt=" " class="img-responsive zoom-img"/>
             </div>
             <div class="col-md-6 w3ls-right">
                 <h4>Game-6</h4>
@@ -346,7 +466,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div id="small-dialog7" class="mfp-hide book-form">
         <div class="pop-up-content-agileits-w3layouts">
             <div class="col-md-6 w3ls-left">
-                <img src="/statics/images/temp/g4big.jpg" alt=" " class="img-responsive zoom-img"/>
+                <img src="/statics/images/chargeBig/3.jpg" alt=" " class="img-responsive zoom-img"/>
             </div>
             <div class="col-md-6 w3ls-right">
                 <h4>Game-7</h4>
@@ -377,7 +497,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div id="small-dialog8" class="mfp-hide book-form">
         <div class="pop-up-content-agileits-w3layouts">
             <div class="col-md-6 w3ls-left">
-                <img src="/statics/images/temp/g8.jpg" alt=" " class="img-responsive zoom-img"/>
+                <img src="/statics/images/charge/g8.jpg" alt=" " class="img-responsive zoom-img"/>
             </div>
             <div class="col-md-6 w3ls-right">
                 <h4>Game-8</h4>
@@ -406,28 +526,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <script type="text/javascript">
     $(function () {
-        $("#review-XIAN").popover({
-            trigger: 'manual',
-            placement: 'right', //placement of the popover. also can use top, bottom, left or right
-            title: '<div style="text-align:center; color:red; text-decoration:underline; font-size:14px;"> Muah ha ha</div>',
-            html: 'true', //needed to show html of course
-            content: '<div id="popOverBox"><img src="${APP_PATH}/statics/images/all/re.jpg" width="251" height="201" /></div>',
-            animation: false
-        }).on("mouseenter", function () {
-            var _this = this;
-            $(this).popover("show");
-            $(this).siblings(".popover").on("mouseleave", function () {
-                $(_this).popover('hide');
-            });
-        }).on("mouseleave", function () {
-            var _this = this;
-            setTimeout(function () {
-                if (!$(".popover:hover").length) {
-                    $(_this).popover("hide")
-                }
-            }, 100);
-        });
-    });
+        $.ajax({
+            "url":"/game/List"
+        })
+    })
 
 </script>
 <%@include file="footer.jsp" %>

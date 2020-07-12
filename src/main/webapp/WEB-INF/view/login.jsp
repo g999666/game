@@ -23,11 +23,11 @@
     <div class="lg-open-p-box">
         <p class="lg-open-p">欢迎来到streamPuls</p>
     </div>--%>
-    <div class="lg-open-btn" id="wsAskBtn">登录/注册</div>
+    <%--<div class="lg-open-btn" id="wsAskBtn">登录/注册</div>--%>
 </div>
 <!--content END-->
 <!--Mask 遮罩-->
-<div class="lg-mask" id="popMask"></div>
+<%--<div class="lg-mask" id="popMask"></div>--%>
 <div class="lg-lrf-box" id="wsLrfBox">
     <!-- 注册 -->
     <div class="lg-reg-box" id="wsRegBox">
@@ -68,7 +68,7 @@
             <div class="error"></div>
         </form>
     </div>
-    <!-- 登录 -->wsRegBox
+    <!-- 登录 -->
     <div class="lg-reg-box lg-login-box" id="wsLoginBox">
         <div class="lg-reg-tit-box">
             <h2 class="lg-reg-tit">登录</h2>
@@ -231,7 +231,7 @@
             }
         })
     })
-    $("body").css({"background-image": "url(/statics/images/login/bac1.jpg)", "background-size": "100% 100%"});
+    /*$("body").css({"background-image": "url(/statics/images/login/bac1.jpg)", "background-size": "100% 100%"});*/
 
 </script>
 <%--注册--%>

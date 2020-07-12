@@ -54,8 +54,9 @@
                         <li><a class="color4" href="/404">新闻</a></li>
                         <li><a class="color5" href="/blog">论坛</a></li>
                         <li><a class="color6" href="/contact">反馈</a></li>
-                        <c:if test="${empty sessionScope.user.userName}"><li><a class="color7" href="/login">请登录</a></li></c:if>
-                        <c:if test="${not empty sessionScope.user.userName}"><li><a class="color7" href="#">${sessionScope.user.userName}</a></li></c:if>
+                        <li id="ac"><a id="a" class="color7" href="/login" target="myFrameName">登录/注册</a></li>
+                        <%--<c:if test="${empty sessionScope.user.userName}">--%><%--</c:if>--%>
+                        <%--<c:if test="${not empty sessionScope.user.userName}"><li><a class="color7" href="#">${sessionScope.user.userName}</a></li></c:if>--%>
                         <div class="clearfix"></div>
                     </ul>
 
@@ -74,5 +75,39 @@
         </div>
     </div>
 </div>
+<style type="text/css">
+/*    #con{
+        width: 200px;
+        height: 200px;
+        background-color: #1E90FF;
+    }*/
+    .center-in-center{
+
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        z-index: 9999;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+</style>
+<div class="center-in-center" id="con" style="width: 600px; height: 500px; display: none; overflow: hidden;">
+    <i id="close" style="width: 30px; height: 30px; background: #ccc; color: #fff; float: right; font-size: 26px; line-height: 30px; text-align: center; font-style: normal;">×</i>
+    <iframe id="myFrameId" style="width: 100%; height: 100%;" name="myFrameName" scrolling="no" frameborder="0"></iframe>
+</div>
+
+<script type="text/javascript">
+    document.getElementById('ac').onclick = function () {
+        document.getElementById('con').style.display = 'block'
+        document.getElementById('a').click()
+    }
+    document.getElementById('close').onclick = function () {
+        document.getElementById('con').style.display = 'none'
+    }
+</script>
+
 </body>
 </html>

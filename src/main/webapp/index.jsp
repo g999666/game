@@ -34,6 +34,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <%@include file="WEB-INF/view/header.jsp" %>
 <!--banner-->
 
+
 <div class="banner">
     <div class="container">
         <div class="wmuSlider example1">
@@ -88,8 +89,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 </div>
-
-
 
 <%@include file="WEB-INF/view/footer.jsp" %>
 

@@ -1,7 +1,8 @@
 @charset "utf-8";
 /* CSS Document */
 body{
-    background:#fff;
+
+    background-color: rgba(0, 0, 0, 0);
 }
 .lg-mask{
     display:none;
@@ -110,7 +111,7 @@ body{
     transform: rotateY(180deg);
 }
 .lg-findpw-box{
-    top:50px;
+    /*top:50px;*/
     -webkit-transform: rotateX(-180deg);
     -moz-transform: rotateX(-180deg);
     -o-transform: rotateX(-180deg);
@@ -161,7 +162,7 @@ body{
     line-height: 50px;
     color: #fff;
     font-size: 22px;
-    background: url(/statics/images/login/lg_turn_btn.png) left top no-repeat;
+    background: url(/statics/images/login/loginbtn.png) left top no-repeat;
     margin: 0 auto;
     margin-top: 195px;
     cursor: pointer;

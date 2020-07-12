@@ -1,5 +1,6 @@
 'use strict';
 (function(){
+
     var $wsRegBox = $('#wsRegBox'),
         $wsRegLink = $('#wsRegLink'),
         $wsLoginBox = $('#wsLoginBox'),
@@ -56,10 +57,13 @@
     (s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] : 
     (s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] : 
     (s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
-
+    $wsLrfBox.fadeIn();
+    $popMask.fadeIn();
 
 
     $(function(){
+        $wsResetPwBox.show();
+        $popMask.show();
         if(isIE){
             $('html').addClass('ie-style');
         }
