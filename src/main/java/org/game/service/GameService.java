@@ -76,4 +76,8 @@ public class GameService {
         }
         return true;
     }
+
+    public List<Game> selectChargeGames() {
+        return gameMapper.selectPriceGames();
+    }
 }

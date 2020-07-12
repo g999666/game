@@ -278,5 +278,4 @@
     where t.game_id = g.id
     and g.id=#{id}
 </select>
-
 </mapper>

@@ -30,6 +30,5 @@ public interface GameMapper {
     int updateByPrimaryKey(Game record);
     ArrayList<Game> selectGameByRankName(@Param("rank") String rank, @Param("num") Integer num);
     ArrayList<Game> selectGameByTime();
-
-
+    List<Game> selectPriceGames();
 }

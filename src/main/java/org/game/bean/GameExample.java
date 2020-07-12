@@ -1,5 +1,6 @@
 package org.game.bean;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -421,6 +422,66 @@ public class GameExample {
 
         public Criteria andLastTopicNotBetween(Integer value1, Integer value2) {
             addCriterion("last_topic not between", value1, value2, "lastTopic");
+            return (Criteria) this;
+        }
+
+        public Criteria andGamepriceIsNull() {
+            addCriterion("gamePrice is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGamepriceIsNotNull() {
+            addCriterion("gamePrice is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andGamepriceEqualTo(BigDecimal value) {
+            addCriterion("gamePrice =", value, "gameprice");
+            return (Criteria) this;
+        }
+
+        public Criteria andGamepriceNotEqualTo(BigDecimal value) {
+            addCriterion("gamePrice <>", value, "gameprice");
+            return (Criteria) this;
+        }
+
+        public Criteria andGamepriceGreaterThan(BigDecimal value) {
+            addCriterion("gamePrice >", value, "gameprice");
+            return (Criteria) this;
+        }
+
+        public Criteria andGamepriceGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("gamePrice >=", value, "gameprice");
+            return (Criteria) this;
+        }
+
+        public Criteria andGamepriceLessThan(BigDecimal value) {
+            addCriterion("gamePrice <", value, "gameprice");
+            return (Criteria) this;
+        }
+
+        public Criteria andGamepriceLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("gamePrice <=", value, "gameprice");
+            return (Criteria) this;
+        }
+
+        public Criteria andGamepriceIn(List<BigDecimal> values) {
+            addCriterion("gamePrice in", values, "gameprice");
+            return (Criteria) this;
+        }
+
+        public Criteria andGamepriceNotIn(List<BigDecimal> values) {
+            addCriterion("gamePrice not in", values, "gameprice");
+            return (Criteria) this;
+        }
+
+        public Criteria andGamepriceBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("gamePrice between", value1, value2, "gameprice");
+            return (Criteria) this;
+        }
+
+        public Criteria andGamepriceNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("gamePrice not between", value1, value2, "gameprice");
             return (Criteria) this;
         }
     }

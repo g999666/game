@@ -3,31 +3,6 @@ package org.game.bean;
 import java.util.Date;
 
 public class User {
-    private String phone;
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "phone='" + phone + '\'' +
-                ", userId=" + userId +
-                ", userName='" + userName + '\'' +
-                ", userPassword='" + userPassword + '\'' +
-                ", userEmail='" + userEmail + '\'' +
-                ", identityId=" + identityId +
-                ", headPic='" + headPic + '\'' +
-                ", createTime=" + createTime +
-                ", modifyTime=" + modifyTime +
-                '}';
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
     private Integer userId;
 
     private String userName;
@@ -37,6 +12,8 @@ public class User {
     private String userEmail;
 
     private Integer identityId;
+
+    private String phone;
 
     private String headPic;
 
@@ -82,6 +59,14 @@ public class User {
 
     public void setIdentityId(Integer identityId) {
         this.identityId = identityId;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone == null ? null : phone.trim();
     }
 
     public String getHeadPic() {

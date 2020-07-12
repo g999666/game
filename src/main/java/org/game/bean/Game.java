@@ -1,5 +1,7 @@
 package org.game.bean;
 
+import java.math.BigDecimal;
+
 public class Game {
     private Integer id;
 
@@ -20,8 +22,21 @@ public class Game {
         return gameU;
     }
 
-    public void setGameU(GameUrl gameU) {
-        this.gameU = gameU;
+    @Override
+    public String toString() {
+        return "Game{" +
+                "id=" + id +
+                ", gameName='" + gameName + '\'' +
+                ", gameDesc='" + gameDesc + '\'' +
+                ", gameUrl=" + gameUrl +
+                ", lastTopic=" + lastTopic +
+                ", gameType=" + gameType +
+                ", gameU=" + gameU +
+                ", topic=" + topic +
+                ", user=" + user +
+                ", ranking=" + ranking +
+                ", gameprice=" + gameprice +
+                '}';
     }
 
     public GameType getGameType() {
@@ -30,6 +45,10 @@ public class Game {
 
     public void setGameType(GameType gameType) {
         this.gameType = gameType;
+    }
+
+    public void setGameU(GameUrl gameU) {
+        this.gameU = gameU;
     }
 
     public Topic getTopic() {
@@ -55,6 +74,8 @@ public class Game {
     public void setRanking(Ranking ranking) {
         this.ranking = ranking;
     }
+
+    private BigDecimal gameprice;
 
     public Integer getId() {
         return id;
@@ -94,5 +115,13 @@ public class Game {
 
     public void setLastTopic(Integer lastTopic) {
         this.lastTopic = lastTopic;
+    }
+
+    public BigDecimal getGameprice() {
+        return gameprice;
+    }
+
+    public void setGameprice(BigDecimal gameprice) {
+        this.gameprice = gameprice;
     }
 }

@@ -11,7 +11,7 @@
  Target Server Version : 50547
  File Encoding         : 65001
 
- Date: 11/07/2020 22:31:51
+ Date: 12/07/2020 21:35:21
 */
 
 SET NAMES utf8mb4;
@@ -27,6 +27,7 @@ CREATE TABLE `game`  (
   `game_desc` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '游戏描述',
   `game_url` int(11) NOT NULL COMMENT '游戏url等',
   `last_topic` int(11) NULL DEFAULT NULL COMMENT '最后的评论',
+  `gamePrice` decimal(10, 2) NULL DEFAULT NULL COMMENT '游戏的价钱',
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `unurl`(`game_url`) USING BTREE,
   INDEX `game_url`(`game_url`) USING BTREE,
@@ -36,12 +37,12 @@ CREATE TABLE `game`  (
 -- ----------------------------
 -- Records of game
 -- ----------------------------
-INSERT INTO `game` VALUES (0, 'admin', '系统', 0, NULL);
-INSERT INTO `game` VALUES (1, '愤怒的小鸟', '愤怒的小鸟描述', 1, 1);
-INSERT INTO `game` VALUES (2, '侠盗飞车', '侠盗飞车描述', 2, NULL);
-INSERT INTO `game` VALUES (3, '极品飞车', '飞车描述', 3, NULL);
-INSERT INTO `game` VALUES (4, 'lol', 'lol描述', 4, NULL);
-INSERT INTO `game` VALUES (6, 'test', 'testsets', 5, NULL);
+INSERT INTO `game` VALUES (0, 'admin', '系统', 0, NULL, NULL);
+INSERT INTO `game` VALUES (1, '愤怒的小鸟', '愤怒的小鸟描述', 1, 1, NULL);
+INSERT INTO `game` VALUES (2, '侠盗飞车', '侠盗飞车描述', 2, NULL, 100.00);
+INSERT INTO `game` VALUES (3, '极品飞车', '飞车描述', 3, NULL, 98.00);
+INSERT INTO `game` VALUES (4, 'lol', 'lol描述', 4, NULL, NULL);
+INSERT INTO `game` VALUES (6, 'test', 'testsets', 5, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for game_type

@@ -7,6 +7,7 @@ import org.game.bean.GameType;
 import org.game.bean.GameTypeExample;
 
 public interface GameTypeMapper {
+    ArrayList<String> getTypeNames();
     long countByExample(GameTypeExample example);
 
     int deleteByExample(GameTypeExample example);
@@ -28,5 +29,4 @@ public interface GameTypeMapper {
     int updateByPrimaryKeySelective(GameType record);
 
     int updateByPrimaryKey(GameType record);
-    ArrayList<String> getTypeNames();
 }

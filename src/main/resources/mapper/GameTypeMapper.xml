@@ -6,6 +6,7 @@
     <result column="type_name" jdbcType="VARCHAR" property="typeName" />
     <result column="topFlag" jdbcType="INTEGER" property="topflag" />
   </resultMap>
+
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

@@ -35,6 +35,12 @@ public class gameController {
         List<Game> lists = gameService.selectGameByRank(list, num);
         return Msg.suessce().add("rank", lists);
     }
+    @RequestMapping(value = "/getCharge")
+    @ResponseBody
+    public Msg getCharge() {
+        List<Game> lists = gameService.selectChargeGames();
+        return Msg.suessce().add("rank", lists);
+    }
 
     @RequestMapping("/HomeList")
     @ResponseBody

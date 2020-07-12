@@ -133,130 +133,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
             <div class="clearfix"></div>
         </div>
-        <div id="tour">
-            <section class="center ">
-                <h2>热门旅游</h2>
-                <p>国内旅游，国外旅游、自助旅游、自驾旅游、游轮签证、主题旅游等各种最新热门旅游推介</p>
-            </section>
-            <figure>
-                <img src="/statics/images/img/tour1.png" alt="">
-                <figcaption>
-                    <div class="tour_title">
-                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
-                    </div>
-                    <div class="info">
-                        <em class="sat">满意度97%</em>
-                        <span class="price"> ￥<strong> 2864</strong> 起</span>
-                    </div>
-                    <div class="type">国内长线</div>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="/statics/images/img/tour2.png" alt="">
-                <figcaption>
-                    <div class="tour_title">
-                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
-                    </div>
-                    <div class="info">
-                        <em class="sat">满意度97%</em>
-                        <span class="price"> ￥<strong> 2864</strong> 起</span>
-                    </div>
-                    <div class="type">国内长线</div>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="/statics/images/img/tour3.png" alt="">
-                <figcaption>
-                    <div class="tour_title">
-                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
-                    </div>
-                    <div class="info">
-                        <em class="sat">满意度97%</em>
-                        <span class="price"> ￥<strong> 2864</strong> 起</span>
-                    </div>
-                    <div class="type">国内长线</div>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="/statics/images/img/tour4.png" alt="">
-                <figcaption>
-                    <div class="tour_title">
-                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
-                    </div>
-                    <div class="info">
-                        <em class="sat">满意度97%</em>
-                        <span class="price"> ￥<strong> 2864</strong> 起</span>
-                    </div>
-                    <div class="type">国内长线</div>
-                </figcaption>
-
-            </figure>
-            <figure>
-                <img src="/statics/images/img/tour5.png" alt="">
-                <figcaption>
-                    <div class="tour_title">
-                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
-                    </div>
-                    <div class="info">
-                        <em class="sat">满意度97%</em>
-                        <span class="price"> ￥<strong> 2864</strong> 起</span>
-                    </div>
-                    <div class="type">国内长线</div>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="/statics/images/img/tour6.png" alt="">
-                <figcaption>
-                    <div class="tour_title">
-                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
-                    </div>
-                    <div class="info">
-                        <em class="sat">满意度97%</em>
-                        <span class="price"> ￥<strong> 2864</strong> 起</span>
-                    </div>
-                    <div class="type">国内长线</div>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="/statics/images/img/tour7.png" alt="">
-                <figcaption>
-                    <div class="tour_title">
-                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
-                    </div>
-                    <div class="info">
-                        <em class="sat">满意度97%</em>
-                        <span class="price"> ￥<strong> 2864</strong> 起</span>
-                    </div>
-                    <div class="type">国内长线</div>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="/statics/images/img/tour8.png" alt="">
-                <figcaption>
-                    <div class="tour_title">
-                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
-                    </div>
-                    <div class="info">
-                        <em class="sat">满意度97%</em>
-                        <span class="price"> ￥<strong> 2864</strong> 起</span>
-                    </div>
-                    <div class="type">国内长线</div>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="/statics/images/img/tour9.png" alt="">
-                <figcaption>
-                    <div class="tour_title">
-                        <strong>&lt;曼谷-芭提雅6日游&gt;</strong> 包团特惠，超丰富景点，升级1晚国五，无自费，更赠送600元成人资费券
-                    </div>
-                    <div class="info">
-                        <em class="sat">满意度97%</em>
-                        <span class="price"> ￥<strong> 2864</strong> 起</span>
-                    </div>
-                    <div class="type">国内长线</div>
-                </figcaption>
-            </figure>
-        </div>
+        <%@include file="gameList.jsp"%>
+<%--        <jsp:include page="gameList.jsp"/>--%>
     </div>
 </div>
 <!--//gallery -->
@@ -524,14 +402,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    $(function () {
-        $.ajax({
-            "url":"/game/List"
-        })
-    })
-
-</script>
 <%@include file="footer.jsp" %>
 
 </body>

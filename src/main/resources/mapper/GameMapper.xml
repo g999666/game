@@ -7,6 +7,7 @@
     <result column="game_desc" jdbcType="VARCHAR" property="gameDesc" />
     <result column="game_url" jdbcType="INTEGER" property="gameUrl" />
     <result column="last_topic" jdbcType="INTEGER" property="lastTopic" />
+    <result column="gamePrice" jdbcType="DECIMAL" property="gameprice" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -67,11 +68,11 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, game_name, game_desc, game_url, last_topic
+    id, game_name, game_desc, game_url, last_topic, gamePrice
   </sql>
-
-        <sql id="rank_Column_List">
+  <sql id="rank_Column_List">
 	game.id,
+	gamePrice,
 	gametype.type_name,
 	game.game_name,
 	game.game_desc,
@@ -85,6 +86,7 @@
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="game_name" jdbcType="VARCHAR" property="gameName" />
     <result column="game_desc" jdbcType="VARCHAR" property="gameDesc" />
+    <result column="gamePrice" javaType="decimal" property="gameprice"/>
     <association property="gameType" javaType="org.game.bean.GameType">
         <result column="type_name" property="typeName"/>
     </association>
@@ -185,9 +187,31 @@ WHERE
 GROUP BY
 	game.id
 </select>
-
-
-
+  <resultMap id="chargeResultMap" type="org.game.bean.Game">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="game_name" jdbcType="VARCHAR" property="gameName" />
+    <result column="game_desc" jdbcType="VARCHAR" property="gameDesc" />
+    <result column="gamePrice" jdbcType="DECIMAL" property="gameprice" />
+    <association property="gameU" javaType="org.game.bean.GameUrl">
+        <result column="pic" property="pic"/>
+</association>
+  </resultMap>
+<select id="selectPriceGames" resultMap="chargeResultMap">
+SELECT
+	game.id,
+	game.game_name,
+	game.game_desc,
+	gamePrice,
+	gameurl.pic
+FROM
+	game
+	INNER JOIN
+	gameurl
+	ON
+		game.game_url = gameurl.id
+WHERE
+	game.gamePrice > 0
+</select>
 
   <select id="selectByExample" parameterType="org.game.bean.GameExample" resultMap="BaseResultMap">
     select
@@ -221,9 +245,11 @@ GROUP BY
   </delete>
   <insert id="insert" parameterType="org.game.bean.Game">
     insert into game (id, game_name, game_desc, 
-      game_url, last_topic)
+      game_url, last_topic, gamePrice
+      )
     values (#{id,jdbcType=INTEGER}, #{gameName,jdbcType=VARCHAR}, #{gameDesc,jdbcType=VARCHAR}, 
-      #{gameUrl,jdbcType=INTEGER}, #{lastTopic,jdbcType=INTEGER})
+      #{gameUrl,jdbcType=INTEGER}, #{lastTopic,jdbcType=INTEGER}, #{gameprice,jdbcType=DECIMAL}
+      )
   </insert>
   <insert id="insertSelective" parameterType="org.game.bean.Game">
     insert into game
@@ -243,6 +269,9 @@ GROUP BY
       <if test="lastTopic != null">
         last_topic,
       </if>
+      <if test="gameprice != null">
+        gamePrice,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -259,6 +288,9 @@ GROUP BY
       </if>
       <if test="lastTopic != null">
         #{lastTopic,jdbcType=INTEGER},
+      </if>
+      <if test="gameprice != null">
+        #{gameprice,jdbcType=DECIMAL},
       </if>
     </trim>
   </insert>
@@ -286,6 +318,9 @@ GROUP BY
       <if test="record.lastTopic != null">
         last_topic = #{record.lastTopic,jdbcType=INTEGER},
       </if>
+      <if test="record.gameprice != null">
+        gamePrice = #{record.gameprice,jdbcType=DECIMAL},
+      </if>
     </set>
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -297,7 +332,8 @@ GROUP BY
       game_name = #{record.gameName,jdbcType=VARCHAR},
       game_desc = #{record.gameDesc,jdbcType=VARCHAR},
       game_url = #{record.gameUrl,jdbcType=INTEGER},
-      last_topic = #{record.lastTopic,jdbcType=INTEGER}
+      last_topic = #{record.lastTopic,jdbcType=INTEGER},
+      gamePrice = #{record.gameprice,jdbcType=DECIMAL}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -317,6 +353,9 @@ GROUP BY
       <if test="lastTopic != null">
         last_topic = #{lastTopic,jdbcType=INTEGER},
       </if>
+      <if test="gameprice != null">
+        gamePrice = #{gameprice,jdbcType=DECIMAL},
+      </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
@@ -325,7 +364,8 @@ GROUP BY
     set game_name = #{gameName,jdbcType=VARCHAR},
       game_desc = #{gameDesc,jdbcType=VARCHAR},
       game_url = #{gameUrl,jdbcType=INTEGER},
-      last_topic = #{lastTopic,jdbcType=INTEGER}
+      last_topic = #{lastTopic,jdbcType=INTEGER},
+      gamePrice = #{gameprice,jdbcType=DECIMAL}
     where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>
