@@ -1,7 +1,6 @@
 package org.game.service;
 
 import org.game.bean.Game;
-import org.game.bean.GameTypeExample;
 import org.game.bean.Topic;
 import org.game.dao.GameMapper;
 import org.game.dao.GameTypeMapper;
@@ -79,5 +78,13 @@ public class GameService {
 
     public List<Game> selectChargeGames() {
         return gameMapper.selectPriceGames();
+    }
+
+    public List<Game> selectChargeGames(Integer num) {
+        return gameMapper.selectPriceGamesByNum(num);
+    }
+
+    public List<String> getGameTypes() {
+        return gameTypeMapper.getTypeNames();
     }
 }

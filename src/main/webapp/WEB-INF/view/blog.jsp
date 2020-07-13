@@ -36,7 +36,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <h2>聊天打屁</h2>
         <div class="single-inline">
             <div class="blog-to">
-                <a href="single.jsp"><img class="img-responsive sin-on" src="${APP_PATH}/statics/images/blog/sin1.jpg" alt=""/></a>
+                <a href="single.jsp"><img class="img-responsive sin-on" src="${APP_PATH}/statics/images/blog/3.jpg" alt=""/></a>
                 <div class="blog-top">
                     <div class="blog-left">
                         <b>23</b>

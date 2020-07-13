@@ -105,7 +105,7 @@ CREATE TABLE `gameurl`  (
 -- Records of gameurl
 -- ----------------------------
 INSERT INTO `gameurl` VALUES (0, NULL, NULL, '0');
-INSERT INTO `gameurl` VALUES (1, 'null', 'null', 'la1.jpg');
+INSERT INTO `gameurl` VALUES (1, 'null', 'null', 'la2.jpg');
 INSERT INTO `gameurl` VALUES (2, 'null', 'null', 'la2.jpg');
 INSERT INTO `gameurl` VALUES (3, 'null', 'null', 'la3.jpg');
 INSERT INTO `gameurl` VALUES (4, 'null', 'null', 'la4.jpg');

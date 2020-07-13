@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -35,12 +36,21 @@ public class gameController {
         List<Game> lists = gameService.selectGameByRank(list, num);
         return Msg.suessce().add("rank", lists);
     }
+
     @RequestMapping(value = "/getCharge")
     @ResponseBody
     public Msg getCharge() {
         List<Game> lists = gameService.selectChargeGames();
         return Msg.suessce().add("rank", lists);
     }
+
+    @RequestMapping(value = "/gethotCharge/{num}")
+    @ResponseBody
+    public Msg getCharge(@PathVariable Integer num) {
+        List<Game> lists = gameService.selectChargeGames(num);
+        return Msg.suessce().add("rank", lists);
+    }
+
 
     @RequestMapping("/HomeList")
     @ResponseBody
@@ -51,12 +61,18 @@ public class gameController {
 
     @RequestMapping("/{list}/{num}")
     @ResponseBody
-    public Msg goGames(@PathVariable("list") String list, @PathVariable("num")Integer num) {
+    public Msg goGames(@PathVariable("list") String list, @PathVariable("num") Integer num) {
 
         PageHelper.startPage(num, 1);
         List<Game> games = gameService.selectGameByRank(list, 0);
         PageInfo pageInfo = new PageInfo(games, 4);
 
-        return Msg.suessce().add("page",pageInfo);
+        return Msg.suessce().add("page", pageInfo);
+    }
+
+    @RequestMapping("/getGameTypes")
+    @ResponseBody
+    public Msg getGameTypes() {
+        return Msg.suessce().add("types",gameService.getGameTypes());
     }
 }

@@ -25,7 +25,6 @@
             "url": "game/getCharge",
             "type": "get",
             "success": function (result) {
-                console.log(result);
                 var items = result.extend.rank;
                 $.each(items,function (index,item) {
                     var fa=$("    <figure>\n" +

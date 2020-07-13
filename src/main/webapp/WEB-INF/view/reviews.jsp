@@ -37,8 +37,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <%--    <link rel="stylesheet" href="${APP_PATH}/statics/css/bootstrap.css">--%>
-	<script src="/statics/js/jquery.magnific-popup.js" type="text/javascript"></script>
-	<script type="text/javascript" src="/statics/js/modernizr.custom.53451.js"></script>
     <style>
         /* Make the image fully responsive */
         .carousel-inner img {
@@ -55,22 +53,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="6000">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox" id="reviews_Click">
-        <div class="item active">
-            <img src="${APP_PATH}/statics/images/blog/sin1.jpg" alt="...">
-        </div>
-        <div class="item">
-            <img src="${APP_PATH}/statics/images/blog/sin1.jpg" alt="...">
-        </div>
-        <div class="item">
-            <img src="${APP_PATH}/statics/images/blog/sin1.jpg" alt="...">
-        </div>
+
     </div>
 
     <!-- Controls -->
@@ -84,61 +71,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </a>
 </div>
 
-<!-- banner -->
-
-<!-- gallery -->
 <div class="gallery-w3layouts" id="gallery">
     <div class="container">
-        <h2>Exclusive Games</h2>
-        <div class="gallery-grids">
-            <div class="gallery-grid">
-                <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
-                   href="#small-dialog">
-                    <img src="/statics/images/charge/g1.jpg" alt=" " class="img-responsive zoom-img"/>
-                </a>
-                <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
-                   href="#small-dialog2">
-                    <img src="/statics/images/temp/g2.jpg" alt=" " class="img-responsive zoom-img"/>
-                </a>
-            </div>
-            <div class="gallery-grid">
-                <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
-                   href="#small-dialog3">
-                    <img src="/statics/images/temp/g3.jpg" alt=" " class="img-responsive zoom-img"/>
-                </a>
-                <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
-                   href="#small-dialog4">
-                    <img src="/statics/images/charge/g5.jpg" alt=" " class="img-responsive zoom-img"/>
-                </a>
-            </div>
-            <div class="gallery-grid">
-                <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
-                   href="#small-dialog5">
-                    <img src="/statics/images/charge/g6.jpg" alt=" " class="img-responsive zoom-img"/>
-                </a>
-                <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
-                   href="#small-dialog6">
-                    <img src="/statics/images/temp/g7.jpg" alt=" " class="img-responsive zoom-img"/>
-                </a>
-            </div>
-            <div class="gallery-grid">
-                <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
-                   href="#small-dialog7">
-                    <img src="/statics/images/temp/g4.jpg" alt=" " class="img-responsive zoom-img"/>
-                </a>
-                <a class="book popup-with-zoom-anim button-isi zoomIn animated" data-wow-delay=".5s"
-                   href="#small-dialog8">
-                    <img src="/statics/images/charge/g8.jpg" alt=" " class="img-responsive zoom-img"/>
-                </a>
-            </div>
-            <div class="clearfix"></div>
-        </div>
         <%@include file="gameList.jsp"%>
-<%--        <jsp:include page="gameList.jsp"/>--%>
     </div>
 </div>
 <!--//gallery -->
-<script>
+<%--<script>
     $(document).ready(function () {
         $('.popup-with-zoom-anim').magnificPopup({
             type: 'inline',
@@ -153,256 +92,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         });
 
     });
-</script>
-<div class="pop-up">
-    <div id="small-dialog" class="mfp-hide book-form">
-        <div class="pop-up-content-agileits-w3layouts">
-            <div class="col-md-6 w3ls-left">
-                <img src="/statics/images/charge/g1.jpg" alt=" " class="img-responsive zoom-img"/>
-            </div>
-            <div class="col-md-6 w3ls-right">
-                <h4>Game-1</h4>
-                <p>Duis sodales nibh vitae augue feugiat efficitur. Sed vel urna sollicitudin, interdum massa nec,
-                    sagittis massa. </p>
-                <p class="agileits">Etiam porttitor neque enim, sit amet mollis est sollicitudin sed.</p>
-                <div class="span span1">
-                    <p class="left">NAME</p>
-                    <p class="right">: Sed Perst</p>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span span2">
-                    <p class="left">DEVELOPER</p>
-                    <p class="right">: Martina</p>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span span3">
-                    <p class="left">REQUIRES</p>
-                    <p class="right">: 2GB Hard Disk Space</p>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<div class="pop-up">
-    <div id="small-dialog2" class="mfp-hide book-form">
-        <div class="pop-up-content-agileits-w3layouts">
-            <div class="col-md-6 w3ls-left">
-                <img src="/statics/images/chargeBig/1.jpg" alt=" " class="img-responsive zoom-img"/>
-            </div>
-            <div class="col-md-6 w3ls-right">
-                <h4>Game-2</h4>
-                <p>Duis sodales nibh vitae augue feugiat efficitur. Sed vel urna sollicitudin, interdum massa nec,
-                    sagittis massa. </p>
-                <p class="agileits">Etiam porttitor neque enim, sit amet mollis est sollicitudin sed.</p>
-                <div class="span span1">
-                    <p class="left">NAME</p>
-                    <p class="right">: Vivamus</p>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span span2">
-                    <p class="left">DEVELOPER</p>
-                    <p class="right">: Quentin</p>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span span3">
-                    <p class="left">REQUIRES</p>
-                    <p class="right">: 3GB Hard Disk Space</p>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<div class="pop-up">
-    <div id="small-dialog3" class="mfp-hide book-form">
-        <div class="pop-up-content-agileits-w3layouts">
-            <div class="col-md-6 w3ls-left">
-                <img src="/statics/images/chargeBig/2.jpg" alt=" " class="img-responsive zoom-img"/>
-            </div>
-            <div class="col-md-6 w3ls-right">
-                <h4>Game-3</h4>
-                <p>Duis sodales nibh vitae augue feugiat efficitur. Sed vel urna sollicitudin, interdum massa nec,
-                    sagittis massa. </p>
-                <p class="agileits">Etiam porttitor neque enim, sit amet mollis est sollicitudin sed.</p>
-                <div class="span span1">
-                    <p class="left">NAME</p>
-                    <p class="right">: Venenatis</p>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span span2">
-                    <p class="left">DEVELOPER</p>
-                    <p class="right">: Stanley</p>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span span3">
-                    <p class="left">REQUIRES</p>
-                    <p class="right">: 1GB Hard Disk Space</p>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<div class="pop-up">
-    <div id="small-dialog4" class="mfp-hide book-form">
-        <div class="pop-up-content-agileits-w3layouts">
-            <div class="col-md-6 w3ls-left">
-                <img src="/statics/images/charge/g5.jpg" alt=" " class="img-responsive zoom-img"/>
-            </div>
-            <div class="col-md-6 w3ls-right">
-                <h4>Game-4</h4>
-                <p>Duis sodales nibh vitae augue feugiat efficitur. Sed vel urna sollicitudin, interdum massa nec,
-                    sagittis massa. </p>
-                <p class="agileits">Etiam porttitor neque enim, sit amet mollis est sollicitudin sed.</p>
-                <div class="span span1">
-                    <p class="left">NAME</p>
-                    <p class="right">: Interdum</p>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span span2">
-                    <p class="left">DEVELOPER</p>
-                    <p class="right">: Spielberg</p>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span span3">
-                    <p class="left">REQUIRES</p>
-                    <p class="right">: 3GB Hard Disk Space</p>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<div class="pop-up">
-    <div id="small-dialog5" class="mfp-hide book-form">
-        <div class="pop-up-content-agileits-w3layouts">
-            <div class="col-md-6 w3ls-left">
-                <img src="/statics/images/charge/g6.jpg" alt=" " class="img-responsive zoom-img"/>
-            </div>
-            <div class="col-md-6 w3ls-right">
-                <h4>Game-5</h4>
-                <p>Duis sodales nibh vitae augue feugiat efficitur. Sed vel urna sollicitudin, interdum massa nec,
-                    sagittis massa. </p>
-                <p class="agileits">Etiam porttitor neque enim, sit amet mollis est sollicitudin sed.</p>
-                <div class="span span1">
-                    <p class="left">NAME</p>
-                    <p class="right">: Faucibus</p>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span span2">
-                    <p class="left">DEVELOPER</p>
-                    <p class="right">: Cameron</p>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span span3">
-                    <p class="left">REQUIRES</p>
-                    <p class="right">: 2GB Hard Disk Space</p>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<div class="pop-up">
-    <div id="small-dialog6" class="mfp-hide book-form">
-        <div class="pop-up-content-agileits-w3layouts">
-            <div class="col-md-6 w3ls-left">
-                <img src="/statics/images/chargeBig/4.jpg" alt=" " class="img-responsive zoom-img"/>
-            </div>
-            <div class="col-md-6 w3ls-right">
-                <h4>Game-6</h4>
-                <p>Duis sodales nibh vitae augue feugiat efficitur. Sed vel urna sollicitudin, interdum massa nec,
-                    sagittis massa. </p>
-                <p class="agileits">Etiam porttitor neque enim, sit amet mollis est sollicitudin sed.</p>
-                <div class="span span1">
-                    <p class="left">NAME</p>
-                    <p class="right">: Tincidunt</p>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span span2">
-                    <p class="left">DEVELOPER</p>
-                    <p class="right">: Jackson</p>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span span3">
-                    <p class="left">REQUIRES</p>
-                    <p class="right">: 4GB Hard Disk Space</p>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<div class="pop-up">
-    <div id="small-dialog7" class="mfp-hide book-form">
-        <div class="pop-up-content-agileits-w3layouts">
-            <div class="col-md-6 w3ls-left">
-                <img src="/statics/images/chargeBig/3.jpg" alt=" " class="img-responsive zoom-img"/>
-            </div>
-            <div class="col-md-6 w3ls-right">
-                <h4>Game-7</h4>
-                <p>Duis sodales nibh vitae augue feugiat efficitur. Sed vel urna sollicitudin, interdum massa nec,
-                    sagittis massa. </p>
-                <p class="agileits">Etiam porttitor neque enim, sit amet mollis est sollicitudin sed.</p>
-                <div class="span span1">
-                    <p class="left">NAME</p>
-                    <p class="right">: Vestibulum</p>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span span2">
-                    <p class="left">DEVELOPER</p>
-                    <p class="right">: Daniel</p>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span span3">
-                    <p class="left">REQUIRES</p>
-                    <p class="right">: 2GB Hard Disk Space</p>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
-<div class="pop-up">
-    <div id="small-dialog8" class="mfp-hide book-form">
-        <div class="pop-up-content-agileits-w3layouts">
-            <div class="col-md-6 w3ls-left">
-                <img src="/statics/images/charge/g8.jpg" alt=" " class="img-responsive zoom-img"/>
-            </div>
-            <div class="col-md-6 w3ls-right">
-                <h4>Game-8</h4>
-                <p>Duis sodales nibh vitae augue feugiat efficitur. Sed vel urna sollicitudin, interdum massa nec,
-                    sagittis massa. </p>
-                <p class="agileits">Etiam porttitor neque enim, sit amet mollis est sollicitudin sed.</p>
-                <div class="span span1">
-                    <p class="left">NAME</p>
-                    <p class="right">: Vehicula ligula</p>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span span2">
-                    <p class="left">DEVELOPER</p>
-                    <p class="right">: Cyrill</p>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="span span3">
-                    <p class="left">REQUIRES</p>
-                    <p class="right">: 3GB Hard Disk Space</p>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
+</script>--%>
+
 <%@include file="footer.jsp" %>
 
 </body>
+<script>
+    $.ajax({
+        "url": "game/gethotCharge/6",
+            "type": "get",
+            "success": function (result) {
+                var items = result.extend.rank;
+                $.each(items,function (index,item) {
+                    var fa=$("        <div class=\"item\">\n" +
+                        "            <img src=\"${APP_PATH}/statics/images/blog/"+item.gameU.pic+"\" alt=\""+item.gameDesc+"\">\n" +
+                        "        </div>");
+                    var field = $("<li data-target=\"#carousel-example-generic\" data-slide-to=\"" + index + "\"></li>");
+                    field.appendTo(".carousel-indicators");
+                    fa.appendTo("#reviews_Click");
+                })
+                $(".carousel-indicators li:first").addClass("active");
+                $("#reviews_Click div:first").addClass("active");
+            },
+            "error":function () {
+                alert("error");
+            }
+    })
+</script>
 </html>

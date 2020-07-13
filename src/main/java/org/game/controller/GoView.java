@@ -93,7 +93,7 @@ public class GoView {
     }
     @RequestMapping("/loginUser")
     @ResponseBody
-    public Msg login(@Valid User user, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    public Msg login(@Valid User user, HttpServletRequest request) {
         String headPic = user.getHeadPic();
         String s = headPic.toUpperCase();
         if (!s.equals(request.getSession().getAttribute(RandomValidateCode.RANDOMCODEKEY))) {
@@ -127,7 +127,6 @@ public class GoView {
         }
         return Msg.fail().add("msg","更改错误");
     }
-
 
     //<editor-fold desc="网页跳转">
     @RequestMapping(value = "/getVerify")

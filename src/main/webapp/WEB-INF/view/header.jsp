@@ -11,6 +11,20 @@
 <html>
 <head>
     <title>Title</title>
+    <script src="/statics/js/jquery.min.js"></script>
+    <script>
+        $.ajax({
+            "url": "/game/getGameTypes",
+            "type": "get",
+            "success":function (result) {
+                $.each(result.extend.types,function (index,item) {
+                    $(".dropdown-content").append($("<a></a>").attr("href", "/games/" + item).append(item));
+                })
+            },"error":function () {
+                alert("游戏类查询异常");
+            }
+        })
+    </script>
 </head>
 <body>
 <div class="header">
@@ -49,14 +63,22 @@
 
                     <ul>
                         <li class="active"><a class="color1" href="${APP_PATH}/index.jsp">主页</a></li>
-                        <li><a class="color2" href="/games/all">游戏</a></li>
+                        <li><%--<a class="color2" href="/games/all">游戏</a>--%>
+
+                            <a class="dropdown color2 dropbtn">
+                            游戏分类↓↓↓
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="/games/all">all</a>
+
+                            </div>
+
+                        </li>
                         <li><a class="color3" href="/reviews">收费</a></li>
-                        <li><a class="color4" href="/404">新闻</a></li>
                         <li><a class="color5" href="/blog">论坛</a></li>
                         <li><a class="color6" href="/contact">反馈</a></li>
-                        <li id="ac"><a id="a" class="color7" href="/login" target="myFrameName">登录/注册</a></li>
-                        <%--<c:if test="${empty sessionScope.user.userName}">--%><%--</c:if>--%>
-                        <%--<c:if test="${not empty sessionScope.user.userName}"><li><a class="color7" href="#">${sessionScope.user.userName}</a></li></c:if>--%>
+                        <c:if test="${empty sessionScope.user.userName}"><li id="ac"><a id="a" class="color7" href="/login" target="myFrameName">登录/注册</a></li></c:if>
+                        <c:if test="${not empty sessionScope.user.userName}"><li><a class="color7" href="#">${sessionScope.user.userName}</a></li></c:if>
                         <div class="clearfix"></div>
                     </ul>
 
@@ -75,6 +97,7 @@
         </div>
     </div>
 </div>
+
 <style type="text/css">
 /*    #con{
         width: 200px;
@@ -100,6 +123,7 @@
 </div>
 
 <script type="text/javascript">
+
     document.getElementById('ac').onclick = function () {
         document.getElementById('con').style.display = 'block'
         document.getElementById('a').click()
@@ -107,7 +131,57 @@
     document.getElementById('close').onclick = function () {
         document.getElementById('con').style.display = 'none'
     }
-</script>
 
+</script>
+<style>
+    /*    .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }*/
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        z-index: 999;
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {background-color: #f3a946
+    }
+
+    .color2:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover {
+        background-color: #3e8e41;
+    }
+</style>
+<script>
+    $(".color2").mouseenter(function () {
+        $(".dropdown-content").css("display", "block");
+    })
+    $(".dropdown-content").mouseleave(function () {
+        $(".dropdown-content").css("display", "none");
+    })
+</script>
 </body>
 </html>

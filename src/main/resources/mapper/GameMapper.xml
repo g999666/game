@@ -212,6 +212,24 @@ FROM
 WHERE
 	game.gamePrice > 0
 </select>
+<select id="selectPriceGamesByNum" resultMap="chargeResultMap">
+SELECT
+	game.id,
+	game.game_name,
+	game.game_desc,
+	gamePrice,
+	gameurl.pic
+FROM
+	game
+	INNER JOIN
+	gameurl
+	ON
+		game.game_url = gameurl.id
+WHERE
+	game.gamePrice > 0
+		limit #{num}
+
+</select>
 
   <select id="selectByExample" parameterType="org.game.bean.GameExample" resultMap="BaseResultMap">
     select

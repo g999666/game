@@ -366,7 +366,7 @@
                         $("#loginBtn").parent().next().text(result.extend.msg);
                         $("#loginBtn").parent().next().css("display", "inline");
                     }else{
-                        window.location.href = "/";
+                        window.parent.location.href='/';
                     }
                 }, "error": function () {
                     alert("发送error");
