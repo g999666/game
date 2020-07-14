@@ -32,4 +32,6 @@ public interface GameMapper {
     ArrayList<Game> selectGameByTime();
     List<Game> selectPriceGames();
     List<Game> selectPriceGamesByNum(@Param("num") Integer num);
+    Game selectGameById(@Param("id") Integer id);
+
 }

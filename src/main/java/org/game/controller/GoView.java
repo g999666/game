@@ -15,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -169,9 +170,13 @@ public class GoView {
         return "404";
     }
 
-    @RequestMapping("/single")
-    public String goSingle() {
-        return "single";
+    @RequestMapping("/single/{num}")
+    @ResponseBody
+    public ModelAndView goSingle(@PathVariable("num") Integer gameId,ModelAndView modelAndView) {
+        Game game = gameService.selectSingle(gameId);
+        modelAndView.setViewName("single");
+        modelAndView.addObject(game);
+        return modelAndView;
     }
 
     @RequestMapping("/login")

@@ -9,6 +9,16 @@ public class GameUrl {
 
     private String pic;
 
+    @Override
+    public String toString() {
+        return "GameUrl{" +
+                "id=" + id +
+                ", downloadUrl='" + downloadUrl + '\'' +
+                ", officialUrl='" + officialUrl + '\'' +
+                ", pic='" + pic + '\'' +
+                '}';
+    }
+
     public Integer getId() {
         return id;
     }

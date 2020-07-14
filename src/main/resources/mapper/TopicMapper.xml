@@ -73,6 +73,66 @@
   <sql id="Base_Column_List">
     id, from_uid, game_id, content, parent_id, good, low, create_time, modify_time
   </sql>
+  <resultMap id="topicMap" type="org.game.bean.Topic">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <id column="from_uid" jdbcType="INTEGER" property="fromUid" />
+    <result column="game_id" jdbcType="INTEGER" property="gameId" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="par" jdbcType="INTEGER" property="parentId" />
+    <result column="good" jdbcType="INTEGER" property="good" />
+    <result column="low" jdbcType="INTEGER" property="low" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+    <result column="parentTopicName" property="parentTopicName"/>
+    <association property="user" javaType="org.game.bean.User">
+        <id column="user_id" property="userId"/>
+        <result column="head_pic" property="headPic"/>
+        <result column="user_name" property="userName"/>
+    </association>
+  </resultMap>
+    <select id="topicCountByGameId" resultType="int">
+      select count(t.id)
+    from game g,topic t
+    where t.game_id = g.id
+    and g.id=#{id}
+</select>
+<select id="selectTopicByGameId" resultMap="topicMap">
+SELECT
+	topic.create_time,
+	topic.from_uid,
+	`user`.user_name,
+	topic.parent_id as par,
+	topic.content,
+	`user`.user_id,
+	topic.modify_time,
+	topic.low,
+	topic.good,
+	topic.game_id,
+	topic.id,
+	`user`.head_pic,
+	(	SELECT
+	user_name
+FROM
+	`user`
+	INNER JOIN
+	topic
+	ON
+		`user`.user_id = topic.from_uid
+WHERE
+	topic.id = par
+	GROUP BY user_name) as parentTopicName
+FROM
+	topic
+	INNER JOIN
+	`user`
+	ON
+		topic.from_uid = `user`.user_id
+WHERE
+	topic.parent_id!=0 and
+	topic.game_id = #{id}
+	ORDER BY topic.good desc
+</select>
+
   <select id="selectByExample" parameterType="org.game.bean.TopicExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
@@ -272,10 +332,5 @@
     where id = #{id,jdbcType=INTEGER}
       and from_uid = #{fromUid,jdbcType=INTEGER}
   </update>
-  <select id="topicCountByGameId" resultType="int">
-      select count(t.id)
-    from game g,topic t
-    where t.game_id = g.id
-    and g.id=#{id}
-</select>
+
 </mapper>

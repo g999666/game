@@ -51,13 +51,7 @@ public class GameService {
             gameList=new ArrayList<>();
             //循环去数据库查改类型的数据列表
             List<Game> games = gameMapper.selectGameByRankName(typeName, 3);
-            for (Game game : games) {
-                // 根据游戏查评论数
-                int i = topicMapper.topicCountByGameId(game.getId());
-                game.setId(i);
-                gameList.add(game);
-            }
-            HomeGames.put(typeName, gameList);
+            HomeGames.put(typeName, games);
         }
         return HomeGames;
     }
@@ -86,5 +80,11 @@ public class GameService {
 
     public List<String> getGameTypes() {
         return gameTypeMapper.getTypeNames();
+    }
+
+    public Game selectSingle(Integer gameId) {
+        Game game = gameMapper.selectGameById(gameId);
+        return game;
+
     }
 }

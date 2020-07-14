@@ -80,7 +80,8 @@
 	gameurl.pic,
 	gameurl.official_url,
 	gameurl.downLoad_url,
-	topic.create_time
+	topic.create_time,
+	  (select count(topic.id) FROM topic WHERE game_id=game.id and parent_id !=0 ) as topicNum
   </sql>
 <resultMap id="GameResultMap" type="org.game.bean.Game">
     <id column="id" jdbcType="INTEGER" property="id" />
@@ -100,6 +101,7 @@
     </association>
     <association property="topic" javaType="org.game.bean.Topic">
         <result property="createTime" column="create_time"/>
+        <result property="topicNum" column="topicNum"/>
     </association>
   </resultMap>
 <select id="selectGameByRankName" resultMap="GameResultMap">
@@ -140,6 +142,7 @@ FROM
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="game_name" jdbcType="VARCHAR" property="gameName" />
     <result column="game_desc" jdbcType="VARCHAR" property="gameDesc" />
+    <result column="gamePrice" javaType="decimal" property="gameprice"/>
     <association property="gameU" javaType="org.game.bean.GameUrl">
         <result column="official_url" property="officialUrl"/>
         <result column="downLoad_url" property="downloadUrl"/>
@@ -149,25 +152,35 @@ FROM
         <result property="createTime" column="create_time"/>
         <result property="parentId" column="parent_id"/>
         <result property="content" column="content"/>
-        <result property="fromUid" column="from_uid"/>
+        <result property="topicNum" column="topicNum"/>
     </association>
     <association property="user" javaType="org.game.bean.User">
         <result column="user_name" property="userName"/>
 </association>
 </resultMap>
+  <resultMap id="chargeResultMap" type="org.game.bean.Game">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="game_name" jdbcType="VARCHAR" property="gameName" />
+    <result column="game_desc" jdbcType="VARCHAR" property="gameDesc" />
+    <result column="gamePrice" jdbcType="DECIMAL" property="gameprice" />
+    <association property="gameU" javaType="org.game.bean.GameUrl">
+        <result column="pic" property="pic"/>
+</association>
+  </resultMap>
 <select id="selectGameByTime" resultMap="BlogResultMap">
   SELECT
 	game.id,
 	game.game_name,
 	game.game_desc,
+	game.gamePrice,
 	gameurl.pic,
 	gameurl.official_url,
 	gameurl.downLoad_url,
 	topic.create_time,
-	topic.from_uid,
 	`user`.user_name,
 	topic.parent_id,
-	topic.content
+	topic.content,
+	 (select count(topic.id) FROM topic WHERE game_id=game.id and parent_id!=0 ) as topicNum
 FROM
 	game
 	INNER JOIN
@@ -187,15 +200,6 @@ WHERE
 GROUP BY
 	game.id
 </select>
-  <resultMap id="chargeResultMap" type="org.game.bean.Game">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="game_name" jdbcType="VARCHAR" property="gameName" />
-    <result column="game_desc" jdbcType="VARCHAR" property="gameDesc" />
-    <result column="gamePrice" jdbcType="DECIMAL" property="gameprice" />
-    <association property="gameU" javaType="org.game.bean.GameUrl">
-        <result column="pic" property="pic"/>
-</association>
-  </resultMap>
 <select id="selectPriceGames" resultMap="chargeResultMap">
 SELECT
 	game.id,
@@ -230,6 +234,41 @@ WHERE
 		limit #{num}
 
 </select>
+<select id="selectGameById" resultMap="BlogResultMap">
+SELECT
+	game.id,
+	game.game_name,
+	game.game_desc,
+	game.gamePrice,
+	gameurl.pic,
+	gameurl.official_url,
+	gameurl.downLoad_url,
+	topic.create_time,
+	`user`.user_name,
+	topic.parent_id,
+	topic.content,
+	(select count(topic.id) FROM topic WHERE game_id=game.id and parent_id !=0 ) as topicNum
+FROM
+	game
+	INNER JOIN
+	gameurl
+	ON
+		game.game_url = gameurl.id
+	LEFT JOIN
+	topic
+	ON
+		game.id = topic.game_id
+	INNER JOIN
+	`user`
+	ON
+		topic.from_uid = `user`.user_id
+WHERE
+	topic.parent_id = 0 and
+	game.id=#{id,jdbcType=INTEGER}
+GROUP BY
+	game.id
+</select>
+
 
   <select id="selectByExample" parameterType="org.game.bean.GameExample" resultMap="BaseResultMap">
     select

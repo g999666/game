@@ -29,4 +29,7 @@ public interface TopicMapper {
 
     int updateByPrimaryKey(Topic record);
     int topicCountByGameId(int id);
+
+    List<Topic> selectTopicByGameId(@Param("id") int gameId);
+
 }

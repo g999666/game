@@ -8,6 +8,7 @@
     <script src="statics/js/jquery.min.js"></script>
     <script src="statics/js/index_top.js"></script>
     <link href="statics/css/style1.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="statics/css/style.css" rel="stylesheet" type="text/css" media="all" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content="Games Center Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -58,23 +59,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <div class="content">
-    <div class="container">
-        <div class="content-top">
-            <h2 class="new">新游戏</h2>
-            <div class="wrap">
-                <div class="main">
- <%--                   <ul id="og-grid" class="og-grid">
-&lt;%&ndash;                        <li>
-                            <a href="#" data-largesrc="/statics/images/1.jpg" data-title="Subway Surfers" data-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque malesuada purus a convallis dictum. Phasellus sodales varius diam, non sagittis lectus. Morbi id magna ultricies ipsum condimentum scelerisque vel quis felis.. Donec et purus nec leo interdum sodales nec sit amet magna. Ut nec suscipit purus, quis viverra urna.">
-                                <img class="img-responsive" src="/statics/images/thumbs/1.jpg" alt="img01"/>
-                            </a>
-                        </li>
-                        <div class="clearfix"> </div>&ndash;%&gt;
-                    </ul>--%>
-                </div>
-            </div>
-        </div>
+    <div class="new-w3-agile">
+        <div class="container" id="newGames">
+            <h3>New Games</h3>
 
+        </div>
     </div>
     <!----->
     <div class="col-mn">
@@ -97,20 +86,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         "url": "game/List/new/9",
         "type": "get",
         "success": function (result) {
-            Grid.init();
             var items = result.extend.rank;
             $.each(items, function (index, item) {
-                var ull=$("<div></div>").attr("id","og-grid").addClass("og-grid");
-                var lil = $("<li></li>");
-                var al = $("<a></a>").attr("href", "#").attr("data-largesrc", "/statics/images/thumbs/thumb1/" + item.gameU.pic).attr("data-title", item.gameName).attr("data-description", item.gameDesc);
-                var il = $("<img/>").addClass("img-responsive").attr("src", "/statics/images/thumbs/thumb2/" + item.gameU.pic).attr("alt", "img" + index);
-                ull = ull.append(lil);
-                ull.appendTo(".main");
-                lil = lil.append(al.append(il)).appendTo('#og-grid');
-                Grid.addItems(lil);
+                var $newGames=("            <div class=\"col-md-3 new-grid-w3l view view-eighth\">\n" +
+                    "                <img src=\"/statics/images/thumbs/thumb1/"+item.gameU.pic+"\" alt=\" \" />\n" +
+                    "                <div class=\"mask\">\n" +
+                    "                    <a href=\"single.html\"><h4>"+item.gameName+"</h4></a>\n" +
+                    "                    <p>"+item.gameDesc+"</p>\n" +
+                    "                </div>\n" +
+                    "            </div>\n");
+                $("#newGames").append($newGames);
             })
-            var cli = $("<div></div>").addClass("clearfix");
-            cli.appendTo('#og-grid');
+            $("#newGames").append("<div class=\"clearfix\"></div>");
         },
         "error": function () {
             alert("error");

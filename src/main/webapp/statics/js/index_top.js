@@ -59,7 +59,7 @@ $(document).ready(function () {
                         var $game = $("<div></div>").addClass("late");
                             var $img=$("<img/>").addClass("img-responsive ").attr("src","/statics/images/low/" + item.gameU.pic);
                             var $al = $("<a></a>").attr("href", "#").addClass("fashion").append($img);
-                            var $grid = $("<div></div>").addClass("grid-product").append($("<span></span>").append(item.gameName)).append($("<p></p>").append("<a></a>").attr("href","#").append(item.gameDesc)).append($("<a></a>").addClass("comment").attr("href", "#").append("<i></i>").append(item.id));
+                            var $grid = $("<div></div>").addClass("grid-product").append($("<span></span>").append(item.gameName)).append($("<p></p>").append("<a></a>").attr("href","#").append(item.gameDesc)).append($("<a></a>").addClass("comment").attr("href", "#").append("<i></i>").append(item.topic.topicNum));
                             var $clearfix = $("<div></div>").addClass("clearfix");
                         $game.append($al).append($grid).append($clearfix).appendTo($gameType);
                     } )

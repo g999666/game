@@ -33,6 +33,21 @@ public class User {
         return userName;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", userName='" + userName + '\'' +
+                ", userPassword='" + userPassword + '\'' +
+                ", userEmail='" + userEmail + '\'' +
+                ", identityId=" + identityId +
+                ", phone='" + phone + '\'' +
+                ", headPic='" + headPic + '\'' +
+                ", createTime=" + createTime +
+                ", modifyTime=" + modifyTime +
+                '}';
+    }
+
     public void setUserName(String userName) {
         this.userName = userName == null ? null : userName.trim();
     }

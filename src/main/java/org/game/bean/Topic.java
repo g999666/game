@@ -6,6 +6,15 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 
 public class Topic extends TopicKey {
+    public String getParentTopicName() {
+        return parentTopicName;
+    }
+
+    public void setParentTopicName(String parentTopicName) {
+        this.parentTopicName = parentTopicName;
+    }
+
+    private String parentTopicName;
     private Integer gameId;
 
     private String content;
@@ -15,9 +24,43 @@ public class Topic extends TopicKey {
     private Integer good;
 
     private Integer low;
+
+    @Override
+    public String toString() {
+        return "Topic{" +
+                "gameId=" + gameId +
+                ", content='" + content + '\'' +
+                ", parentId=" + parentId +
+                ", good=" + good +
+                ", low=" + low +
+                ", createTime=" + createTime +
+                ", user=" + user +
+                ", topicNum=" + topicNum +
+                ", modifyTime=" + modifyTime +
+                '}';
+    }
+
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date createTime;
+    private User user;
+    private Integer topicNum;
+
+    public Integer getTopicNum() {
+        return topicNum;
+    }
+
+    public void setTopicNum(Integer topicNum) {
+        this.topicNum = topicNum;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     private Date modifyTime;
 

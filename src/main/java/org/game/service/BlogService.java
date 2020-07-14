@@ -1,6 +1,7 @@
 package org.game.service;
 
 import org.game.bean.Game;
+import org.game.bean.Topic;
 import org.game.dao.GameMapper;
 import org.game.dao.TopicMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,12 +26,11 @@ public class BlogService {
 
     public List<Game> getAllBlog() {
         ArrayList<Game> games1 = gameMapper.selectGameByTime();
-        List<Game> gameList = new ArrayList<>();
-        for (Game game : games1) {
-            int i = topicMapper.topicCountByGameId(game.getId());
-            game.setId(i);
-            gameList.add(game);
-        }
-        return gameList;
+
+        return games1;
+    }
+
+    public List<Topic> getAllTopicById(Integer id) {
+        return topicMapper.selectTopicByGameId(id);
     }
 }

@@ -89,6 +89,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                  $(".single-inline").empty();
                 var items=result.extend.page.list;
                 $.each(items, function (index, item) {
+                    console.log(item);
                     var time=item.topic.createTime;
                     time=time.replace(new RegExp(/-/gm) ,"/");
                     var date = new Date(time).toUTCString();
@@ -98,8 +99,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     var $blogTop=$("<div></div>").addClass("blog-top");
                         var $blogLeft=$("<div></div>").addClass("blog-left").append($("<b>"+split[2]+"</b>")).append("<span>"+split[1]+"</span>");
                         var $topBlog = $("<div></div>").addClass("top-blog");
-                            $topBlog.append($("<a></a>").addClass("fast").attr("href", "#").append("<b>公告</b>:"+item.topic.content));
-                            $topBlog.append($("<p></p>").append("编辑自").append($("<a></a>").attr("href","#").append(item.user.userName)).append(" | "+item.id+"条评论"))
+                            $topBlog.append($("<a></a>").addClass("fast").attr("href", "#").append("<b>"+item.gameName+"公告</b>:"+item.topic.content));
+                            $topBlog.append($("<p></p>").append("编辑自").append($("<a></a>").attr("href","#").append(item.user.userName)).append(" | "+item.topic.topicNum+"条评论"))
                             $topBlog.append($("<p></p>").addClass("sed").append("12312321321321312"));
                             $topBlog.append($("<a></a>").attr("href","#").addClass("more").append("Readmore <span> </span>"));
                     $blogTop.append($blogLeft);
