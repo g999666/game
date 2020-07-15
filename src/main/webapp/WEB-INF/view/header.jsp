@@ -16,11 +16,11 @@
         $.ajax({
             "url": "/game/getGameTypes",
             "type": "get",
-            "success":function (result) {
-                $.each(result.extend.types,function (index,item) {
+            "success": function (result) {
+                $.each(result.extend.types, function (index, item) {
                     $(".dropdown-content").append($("<a></a>").attr("href", "/games/" + item).append(item));
                 })
-            },"error":function () {
+            }, "error": function () {
                 alert("游戏类查询异常");
             }
         })
@@ -66,7 +66,7 @@
                         <li><%--<a class="color2" href="/games/all">游戏</a>--%>
 
                             <a class="dropdown color2 dropbtn">
-                            游戏分类↓↓↓
+                                游戏分类↓↓↓
                             </a>
                             <div class="dropdown-content">
                                 <a href="/games/all">all</a>
@@ -77,8 +77,12 @@
                         <li><a class="color3" href="/reviews">收费</a></li>
                         <li><a class="color5" href="/blog">论坛</a></li>
                         <li><a class="color6" href="/contact">反馈</a></li>
-                        <c:if test="${empty sessionScope.user.userName}"><li id="ac"><a id="a" class="color7" href="/login" target="myFrameName">登录/注册</a></li></c:if>
-                        <c:if test="${not empty sessionScope.user.userName}"><li><a class="color7" href="#">${sessionScope.user.userName}</a></li></c:if>
+                        <c:if test="${empty sessionScope.user.userName}">
+                            <li id="ac"><a id="a" class="color7" href="/login" target="myFrameName">登录/注册</a></li>
+                        </c:if>
+                        <c:if test="${not empty sessionScope.user.userName}">
+                            <li><a class="color7" href="#">${sessionScope.user.userName}</a></li>
+                        </c:if>
                         <div class="clearfix"></div>
                     </ul>
 
@@ -99,12 +103,12 @@
 </div>
 
 <style type="text/css">
-/*    #con{
-        width: 200px;
-        height: 200px;
-        background-color: #1E90FF;
-    }*/
-    .center-in-center{
+    /*    #con{
+            width: 200px;
+            height: 200px;
+            background-color: #1E90FF;
+        }*/
+    .center-in-center {
 
         position: fixed;
         top: 50%;
@@ -118,8 +122,10 @@
     }
 </style>
 <div class="center-in-center" id="con" style="width: 600px; height: 500px; display: none; overflow: hidden;">
-    <i id="close" style="width: 30px; height: 30px; background: #ccc; color: #fff; float: right; font-size: 26px; line-height: 30px; text-align: center; font-style: normal;">×</i>
-    <iframe id="myFrameId" style="width: 100%; height: 100%;" name="myFrameName" scrolling="no" frameborder="0"></iframe>
+    <i id="close"
+       style="width: 30px; height: 30px; background: #ccc; color: #fff; float: right; font-size: 26px; line-height: 30px; text-align: center; font-style: normal;">×</i>
+    <iframe id="myFrameId" style="width: 100%; height: 100%;" name="myFrameName" scrolling="no"
+            frameborder="0"></iframe>
 </div>
 
 <script type="text/javascript">
@@ -154,7 +160,7 @@
         position: absolute;
         background-color: #f9f9f9;
         min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     }
 
     .dropdown-content a {
@@ -164,7 +170,8 @@
         display: block;
     }
 
-    .dropdown-content a:hover {background-color: #f3a946
+    .dropdown-content a:hover {
+        background-color: #f3a946
     }
 
     .color2:hover .dropdown-content {
@@ -176,12 +183,16 @@
     }
 </style>
 <script>
-    $(".color2").mouseenter(function () {
-        $(".dropdown-content").css("display", "block");
-    })
-    $(".dropdown-content").mouseleave(function () {
-        $(".dropdown-content").css("display", "none");
-    })
+    /*    $(".color2").click(function () {
+            $(".dropdown-content").css("display", "block");
+        })
+        $(".color2").click(function () {
+            $(".dropdown-content").css("display", "none");
+        })*/
+    $(".color2").click(function () {
+        $(".dropdown-content").toggle();
+    });
+
 </script>
 </body>
 </html>

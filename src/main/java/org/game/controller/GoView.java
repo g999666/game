@@ -6,6 +6,7 @@ import org.game.bean.Game;
 import org.game.bean.Msg;
 import org.game.bean.Topic;
 import org.game.bean.User;
+import org.game.dao.TopicMapper;
 import org.game.service.GameService;
 import org.game.service.UserService;
 import org.game.utils.NoteCode;
@@ -129,6 +130,22 @@ public class GoView {
         return Msg.fail().add("msg","更改错误");
     }
 
+    @RequestMapping("/saveTopic/{reply}/{gameId}/{msg}")
+    @ResponseBody
+    public Msg saveTopic(@PathVariable("reply") Integer reply,@PathVariable("gameId")Integer gameId, @PathVariable("msg") String msg,HttpServletRequest request) {
+        User user = (User)request.getSession().getAttribute("user");
+        if (user == null) {
+            return Msg.fail().add("msg", "亲,请先登录(づ￣3￣)づ╭❤～");
+        }
+        if (reply == 0) {
+            return Msg.fail().add("msg", "小伙汁，别让我逮到咯，敢乱搞我的网页");
+        }
+        if(gameService.saveTopic(reply,user.getUserId(),gameId, msg)){
+            return Msg.suessce();
+        }
+        return Msg.fail().add("msg", "添加评论失败");
+    }
+
     //<editor-fold desc="网页跳转">
     @RequestMapping(value = "/getVerify")
     public void getVerify(HttpServletRequest request, HttpServletResponse response) {
@@ -183,6 +200,7 @@ public class GoView {
     public String goLogin() {
         return "login";
     }
+
     //</editor-fold>
 
 

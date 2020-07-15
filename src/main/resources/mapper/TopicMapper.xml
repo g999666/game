@@ -130,7 +130,7 @@ FROM
 WHERE
 	topic.parent_id!=0 and
 	topic.game_id = #{id}
-	ORDER BY topic.good desc
+	ORDER BY topic.create_time
 </select>
 
   <select id="selectByExample" parameterType="org.game.bean.TopicExample" resultMap="BaseResultMap">

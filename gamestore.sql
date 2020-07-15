@@ -11,7 +11,7 @@
  Target Server Version : 50547
  File Encoding         : 65001
 
- Date: 12/07/2020 21:35:21
+ Date: 15/07/2020 15:34:12
 */
 
 SET NAMES utf8mb4;
@@ -106,8 +106,8 @@ CREATE TABLE `gameurl`  (
 -- ----------------------------
 INSERT INTO `gameurl` VALUES (0, NULL, NULL, '0');
 INSERT INTO `gameurl` VALUES (1, 'null', 'null', 'la1.jpg');
-INSERT INTO `gameurl` VALUES (2, 'null', 'null', 'la1.jpg');
-INSERT INTO `gameurl` VALUES (3, 'null', 'null', 'la2.jpg');
+INSERT INTO `gameurl` VALUES (2, 'null', 'null', 'la2.jpg');
+INSERT INTO `gameurl` VALUES (3, 'null', 'null', 'la3.jpg');
 INSERT INTO `gameurl` VALUES (4, 'null', 'null', 'la4.jpg');
 INSERT INTO `gameurl` VALUES (5, 'null', 'null', 'la5.jpg');
 
@@ -146,12 +146,11 @@ CREATE TABLE `topic`  (
   INDEX `fk_fg`(`game_id`) USING BTREE,
   CONSTRAINT `fk_fg` FOREIGN KEY (`game_id`) REFERENCES `game` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   CONSTRAINT `fk_fu` FOREIGN KEY (`from_uid`) REFERENCES `user` (`user_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 61 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of topic
 -- ----------------------------
-INSERT INTO `topic` VALUES (1, 1, '摸鱼', 1, 0, 0, 0, '2020-07-07 16:21:58', NULL);
 INSERT INTO `topic` VALUES (2, 1, '摸鱼1', 1, 0, 0, 0, '2020-07-07 16:21:50', NULL);
 INSERT INTO `topic` VALUES (3, 2, '摸鱼2', 1, 0, 0, 0, '2020-07-07 16:21:11', NULL);
 INSERT INTO `topic` VALUES (4, 0, '123', 1, 1, 0, 0, '2020-07-10 09:42:33', NULL);
@@ -163,7 +162,10 @@ INSERT INTO `topic` VALUES (9, 0, '1231231&_&11111111111111111111111111111111111
 INSERT INTO `topic` VALUES (10, 0, '1231231&_&我真的就方法 佛涩废和搜if饿死of杰恩斯of金额死哦乏味金佛大家我的', 1, 1, 0, 0, '2020-07-10 10:05:58', NULL);
 INSERT INTO `topic` VALUES (11, 0, '1231231&_&，。、，。，、，。、‘&1231231313’&2131312312#!@%%!qw单位ID阿无敌哈维', 1, 1, 0, 0, '2020-07-10 10:20:44', NULL);
 INSERT INTO `topic` VALUES (12, 0, '主题123123&_&12312312312.,/.;[];[];]>\"\"}}\"?}>}:。】‘’‘’】【。】】【》}{}》}》}》}》}》！@#@！￥@！%@！#@￥￥￥}。、', 1, 1, 0, 0, '2020-07-10 10:25:30', NULL);
-INSERT INTO `topic` VALUES (13, 0, '主题111&_&123213><\":|e1231312312312312321312312123123123213,faiawfjawoifawiufhiafwafawf', 1, 1, 0, 0, '2020-07-10 10:26:28', NULL);
+INSERT INTO `topic` VALUES (57, 1, '123', 1, 1, 0, 0, '2020-07-15 14:13:15', NULL);
+INSERT INTO `topic` VALUES (58, 1, '321', 1, 57, 0, 0, '2020-07-15 14:13:23', NULL);
+INSERT INTO `topic` VALUES (59, 1, '321123', 1, 58, 0, 0, '2020-07-15 14:13:26', NULL);
+INSERT INTO `topic` VALUES (60, 1, '123', 1, 1, 0, 0, '2020-07-15 14:14:33', NULL);
 
 -- ----------------------------
 -- Table structure for user
@@ -182,14 +184,14 @@ CREATE TABLE `user`  (
   PRIMARY KEY (`user_id`) USING BTREE,
   INDEX `fk_fi`(`identity_id`) USING BTREE,
   CONSTRAINT `fk_identity` FOREIGN KEY (`identity_id`) REFERENCES `identity` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = COMPACT;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (1, '郭浩驰', '123456', '3286739215@qq.com', 1, NULL, NULL, '2020-07-05 00:12:51', NULL);
-INSERT INTO `user` VALUES (2, '3286739215', '123321', NULL, 2, '18559268627', NULL, '2020-07-11 09:49:01', NULL);
-INSERT INTO `user` VALUES (3, '123', 'qwe123.0', NULL, 2, '', NULL, '2020-07-11 09:54:23', NULL);
-INSERT INTO `user` VALUES (4, 'zoujun', '123456', NULL, 2, '18959252884', NULL, '2020-07-11 10:14:05', NULL);
+INSERT INTO `user` VALUES (1, '郭浩驰', '123456', '3286739215@qq.com', 1, NULL, '1.jpg', '2020-07-05 00:12:51', NULL);
+INSERT INTO `user` VALUES (2, '3286739215', '123321', NULL, 2, '18559268627', '0', '2020-07-11 09:49:01', NULL);
+INSERT INTO `user` VALUES (3, '123', 'qwe123.0', NULL, 2, '', '0', '2020-07-11 09:54:23', NULL);
+INSERT INTO `user` VALUES (4, 'zoujun', '123456', NULL, 2, '18959252884', '0', '2020-07-11 10:14:05', NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;

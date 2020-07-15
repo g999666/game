@@ -85,6 +85,19 @@ public class GameService {
     public Game selectSingle(Integer gameId) {
         Game game = gameMapper.selectGameById(gameId);
         return game;
+    }
+    public boolean saveTopic(Integer integer,Integer userId, Integer gameId,String msg) {
+        Topic topic = new Topic();
+        topic.setParentId(integer);
+        topic.setFromUid(userId);
+        topic.setGameId(gameId);
+        topic.setContent(msg);
+        int insert = topicMapper.insertSelective(topic);
+        if (insert != 1) {
+            return false;
+        }else{
+            return true;
+        }
 
     }
 }
