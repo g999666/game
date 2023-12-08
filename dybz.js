@@ -150,7 +150,7 @@ const $ = new Env('dybz')
 // for (var i = 0; i < binArray.length; i++) {
 //   str += String.fromCharCode(parseInt(binArray[i]))
 // }
-
+$.log($response.body)
 let result = new TextDecoder('gbk').decode($response.body)
 $.log(result)
 var urls = $request
