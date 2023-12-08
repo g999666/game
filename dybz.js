@@ -144,7 +144,7 @@ let findNextUrl = (html, currUrl) => { //下一页
 
 const $ = new Env('dybz')
 
-// $.log($.toStr($response))
+$.log($.toStr($response))
 
 // var str = ''
 // for (var i = 0; i < binArray.length; i++) {
