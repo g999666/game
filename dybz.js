@@ -141,10 +141,10 @@ let findNextUrl = (html, currUrl) => { //下一页
     return nextUrl
 }
 
-
+$.log(1111111222222)
 const $ = new Env('dybz')
 
-$.log(111212222)
+
 
 // var str = ''
 // for (var i = 0; i < binArray.length; i++) {
