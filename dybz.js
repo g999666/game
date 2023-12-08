@@ -141,7 +141,7 @@ let findNextUrl = (html, currUrl) => { //下一页
     return nextUrl
 }
 
-$.log(1111111222222)
+$.log('22222211111')
 const $ = new Env('dybz')
 
 
