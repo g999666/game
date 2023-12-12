@@ -131,7 +131,7 @@ var result = $response.body
 var urls = $request
 var ck = urls.headers["Cookie"]
 var ua = urls.headers["User-Agent"]
-urls = urls.url
+urls = $request.url
 
 
 
